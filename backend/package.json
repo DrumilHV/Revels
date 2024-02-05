@@ -1,0 +1,14 @@
+{
+  "name": "revels_backend",
+  "version": "1.0.0",
+  "description": "node backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sys admin and web dev team",
+  "license": "",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
