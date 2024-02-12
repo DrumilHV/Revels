@@ -1,58 +1,52 @@
-// import React from "react";
-// import QrScanner from "qr-scanner";
-// const imageScanner = document.getElementById("video");
-// const Scan = () => {
-//   const qrScanner = new QrScanner(imageScanner, (result) =>
-//     console.log("decoded qr code:", result)
-//   );
-//   qrScanner.start();
-// };
-// const NoScan = () => {
-//   const qrScanner = new QrScanner(imageScanner, (result) =>
-//     console.log("decoded qr code:", result)
-//   );
-//   qrScanner.stop();
-// };
-// const Scanner = () => {
-//   return (
-//     <>
-//       <video id="video"></video>
-//       <button onClick={Scan}>Scan</button>
-//       <button onClick={NoScan}>Stop</button>
-//     </>
-//   );
-// };
-
-// export default Scanner;
-
 import React, { useRef, useEffect } from "react";
 import QrScanner from "qr-scanner";
 
 const Scanner = () => {
   const videoRef = useRef(null);
+  const qrScannerRef = useRef(null);
+
+  useEffect(() => {
+    qrScannerRef.current = new QrScanner(videoRef.current, (result) => {
+      console.log("decoded qr code:", result);
+      stopScan();
+    });
+    qrScannerRef.current.start();
+
+    return () => stopScan();
+  }, []);
 
   const startScan = () => {
-    const qrScanner = new QrScanner(videoRef.current, (result) =>
-      console.log("decoded qr code:", result)
-    );
-    qrScanner.start();
+    qrScannerRef.current.start();
   };
 
   const stopScan = () => {
-    const qrScanner = new QrScanner(videoRef.current, (result) =>
-      console.log("decoded qr code:", result)
-    );
-    qrScanner.stop();
+    qrScannerRef.current.stop();
   };
 
-  useEffect(() => {
-    startScan(); // Optionally start the scan when the component mounts
-    return () => stopScan(); // Optionally stop the scan when the component unmounts
-  }, []);
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const image = new Image();
+      image.src = event.target.result;
+      image.onload = () => {
+        QrScanner.scanImage(image)
+          .then((result) => {
+            console.log("decoded qr code from image:", result);
+            stopScan();
+          })
+          .catch((error) => {
+            console.error("error scanning image:", error);
+          });
+      };
+    };
+    reader.readAsDataURL(file);
+  };
 
   return (
     <>
       <video ref={videoRef} autoPlay playsInline muted></video>
+      <input type="file" accept="image/*" onChange={handleImageUpload} />
       <button onClick={startScan}>Scan</button>
       <button onClick={stopScan}>Stop</button>
     </>
