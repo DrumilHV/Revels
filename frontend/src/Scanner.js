@@ -25,29 +25,44 @@
 
 // export default Scanner;
 
+// Drumil's Video code:
 import React, { useRef, useEffect } from "react";
 import QrScanner from "qr-scanner";
 
 const Scanner = () => {
   const videoRef = useRef(null);
+  let qrScanner = null;
 
   const startScan = () => {
-    const qrScanner = new QrScanner(videoRef.current, (result) =>
-      console.log("decoded qr code:", result)
-    );
-    qrScanner.start();
+    try {
+      if (!qrScanner) {
+        qrScanner = new QrScanner(videoRef.current, (result) =>
+          console.log("decoded qr code:", result)
+        );
+        qrScanner.start();
+      }
+    } catch (error) {
+      console.log("Error in startScan: ", error);
+    }
   };
 
   const stopScan = () => {
-    const qrScanner = new QrScanner(videoRef.current, (result) =>
-      console.log("decoded qr code:", result)
-    );
-    qrScanner.stop();
+    try {
+      if (qrScanner) {
+        qrScanner.stop();
+        qrScanner.destroy();
+        qrScanner = null;
+      }
+    } catch (error) {
+      console.log("Error in stopScan: ", error);
+    }
   };
 
   useEffect(() => {
     startScan(); // Optionally start the scan when the component mounts
-    return () => stopScan(); // Optionally stop the scan when the component unmounts
+    return () => {
+      stopScan(); // Optionally stop the scan when the component unmounts
+    };
   }, []);
 
   return (
@@ -60,3 +75,29 @@ const Scanner = () => {
 };
 
 export default Scanner;
+// ...................................................
+
+// import React from "react";
+
+// const Scanner = () => {
+//   const handleImage = (e) => {
+//     const reader = new FileReader();
+//     reader.onload = () => {
+//       reader.readAsDataURL(e.target.files[0]);
+//     };
+//   };
+
+//   return (
+//     <>
+//       <input
+//         id="file"
+//         name="file"
+//         type="file"
+//         accept="image/png, image/jpeg"
+//         onChange={handleImage}
+//       />
+//     </>
+//   );
+// };
+
+// export default Scanner;
