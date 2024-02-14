@@ -1,0 +1,24 @@
+{
+  "name": "revels_backend",
+  "version": "1.0.0",
+  "description": "node backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Sys admin and web dev team",
+  "license": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.2",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-mongo-sanitize": "^2.2.0",
+    "helmet": "^7.1.0",
+    "http-status-codes": "^2.3.0",
+    "mongoose": "^8.1.2",
+    "morgan": "^1.10.0",
+    "xss-clean": "^0.1.4"
+  }
+}
