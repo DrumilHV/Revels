@@ -8,34 +8,19 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
 
 import dotenv from "dotenv";
 dotenv.config();
-
 import "express-async-errors";
-
 //db and authenticate user
 import connectDB from "./db/connect.js";
-
-//routers
-
-//middleware
-import notFoundMiddleware from "./middleware/not-found.js";
-import errorHandlerMiddleware from "./middleware/error-handler.js";
-// import authenticateUser from "./middleware/auth.js";
-
-import helmet from "helmet";
-import xss from "xss-clean";
-import mongoSanitize from "express-mongo-sanitize";
-import cookieParser from "cookie-parser";
-
 const port = process.env.PORT || 8080;
 
-app.use(express.json());
-app.use(cookieParser());
-app.use(helmet());
-app.use(xss());
-app.use(mongoSanitize());
 
-app.use(notFoundMiddleware);
-app.use(errorHandlerMiddleware);
+
+connectDB(
+  "mongodb+srv://sandeeprai:Sandy9369204281@revelsexceltodocument.qsh9cgi.mongodb.net/?retryWrites=true&w=majority"
+);
+
+import userRoute from "./routes/userRoute.js";
+app.use("/", userRoute);
 
 const start = async () => {
   try {
