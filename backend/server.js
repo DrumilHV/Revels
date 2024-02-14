@@ -16,7 +16,7 @@ const port = process.env.PORT || 8080;
 
 
 connectDB(
-  "mongodb+srv://sandeeprai:Sandy9369204281@revelsexceltodocument.qsh9cgi.mongodb.net/?retryWrites=true&w=majority"
+  "mongodb+srv://"
 );
 
 import userRoute from "./routes/userRoute.js";
