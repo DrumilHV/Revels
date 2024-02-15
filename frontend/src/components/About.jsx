@@ -24,11 +24,10 @@ const About = () => {
                 its Ruby Jubilee. To commemorate the milestone, the
                 administration and the students came up with a string of events,
                 that aimed at propagating Arts and Culture.
-                <br /> From these efforts was born Revels&apos;82- “Stormy
+                From these efforts was born Revels&apos;82- “Stormy
                 Interlude”, the first edition of the cultural fest, presided by
                 dignitaries led by Shri Govind Narain (then Governor of
                 Karnataka state).
-                <br />
                 Over time, the fest has grown to mammoth proportions, boasting
                 both sustained participation and an enthused Organizing Team.
               </p>
