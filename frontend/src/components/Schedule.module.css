@@ -1,0 +1,48 @@
+/* Schedule.module.css */
+
+.scheduleContainer {
+    background-color: #faebd7; 
+    border-radius: 16px;
+    overflow: hidden;
+    border: 3px solid white;
+    width: 80%;
+    margin: 20px auto;
+    padding: 0;
+  }
+  
+  .scheduleHeader {
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    color: #fff;
+    background-color: #deb887; 
+  }
+  
+  .scheduleTable {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+  }
+  
+  .scheduleTable th,
+  .scheduleTable td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white;
+  }
+  
+  .scheduleTable th {
+    background-color: #deb887;
+    color: white;
+  }
+  
+  .columnDivider {
+    border-right: 3px solid white;
+  }
+  
+  .rowDivider td {
+    border-bottom: 3px solid white;
+  }
+  
+  /* Schedule.module.css */
