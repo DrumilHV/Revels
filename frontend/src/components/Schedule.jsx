@@ -270,12 +270,8 @@ const Schedule = () => {
             <th>Time</th>
           </tr>
         </thead>
-        <tbody>
-          {/* Add Day 4 events here */}
-        </tbody>
       </table>
 
-      {/* ... Continue adding sections for Day 5 and Day 6 ... */}
     </div>
   );
 =======
