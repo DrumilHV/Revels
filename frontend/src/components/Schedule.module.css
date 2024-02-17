@@ -3,12 +3,22 @@
 .scheduleContainer {
     background-color: #faebd7; 
     border-radius: 16px;
-    overflow: hidden;
+    overflow: auto;
     border: 3px solid white;
     width: 80%;
     margin: 20px auto;
     padding: 0;
+    height: 100vh;
   }
+
+/* Hide the scrollbar */
+.scheduleContainer::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.scheduleContainer::-webkit-scrollbar-thumb {
+  background-color: #faebd7; /* Adjust the color to match your container background */
+}
   
   .scheduleHeader {
     text-align: center;
@@ -44,5 +54,5 @@
   .rowDivider td {
     border-bottom: 3px solid white;
   }
-  
+
   /* Schedule.module.css */

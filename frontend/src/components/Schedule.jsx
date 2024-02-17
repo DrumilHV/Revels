@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 import React from 'react';
 import styles from './Schedule.module.css';
 
 const Schedule = () => {
   return (
     <div className={styles.scheduleContainer}>
-      {/* Day 0 */}
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 0 (MARCH 3, 2024)
       </div>
+      
       <table className={styles.scheduleTable}>
         <thead>
           <tr className={styles.rowDivider}>
@@ -40,7 +39,6 @@ const Schedule = () => {
         </tbody>
       </table>
 
-      {/* Day 1 */}
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 1 (MARCH 4, 2024)
       </div>
@@ -60,11 +58,9 @@ const Schedule = () => {
             <td className={styles.columnDivider}>AB-1 Quadrangle</td>
             <td>6:30-9:00</td>
           </tr>
-          {/* Add more Day 1 events here */}
         </tbody>
       </table>
 
-      {/* Day 2 */}
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 2 (MARCH 5, 2024)
       </div>
@@ -93,7 +89,6 @@ const Schedule = () => {
         </tbody>
       </table>
 
-      {/* Day 3 */}
       <div className={styles.scheduleHeader}>
         REVELS 2024: DAY 1 (MARCH 6, 2024)
       </div>
@@ -150,48 +145,43 @@ const Schedule = () => {
           <tr>
             <td className={styles.columnDivider}rowSpan="7">ERGO</td>
             <td className={styles.columnDivider}>JUST A MINUTE - ROUND 1</td>
-            <td className={styles.columnDivider}>AB-3 405</td>
+            <td className={styles.columnDivider}rowSpan="2">AB-3 405</td>
             <td>1:00-2:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>JUST A MINUTE - ROUND 2</td>
-            <td className={styles.columnDivider}>AB-3 405</td>
             <td>2:00-3:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>POTPOURRI - ROUND 1</td>
-            <td className={styles.columnDivider}>AB-3 403</td>
+            <td className={styles.columnDivider}rowSpan="2">AB-3 403</td>
             <td className={styles.columnDivider}>2:00-3:30</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>POTPOURRI - ROUND 2</td>
-            <td className={styles.columnDivider}>AB-3 403</td>
             <td>3:30-5:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>DEBATE TOURNAMENT - ROUND 1</td>
-            <td className={styles.columnDivider}>AB-3 404</td>
+            <td className={styles.columnDivider}rowSpan="3">AB-3 404</td>
             <td className={styles.columnDivider}>1:00-5:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>DEBATE TOURNAMENT - ROUND 2</td>
-            <td className={styles.columnDivider}>AB-3 404</td>
             <td className={styles.columnDivider}>1:00-5:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>DEBATE TOURNAMENT - ROUND 3</td>
-            <td className={styles.columnDivider}>AB-3 404</td>
             <td className={styles.columnDivider}>1:00-5:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}rowSpan="2">FOOTLOOSE</td>
             <td className={styles.columnDivider}>SOLO DANCE-WESTERN ROUND 1</td>
-            <td className={styles.columnDivider}>Library Auditorium</td>
+            <td className={styles.columnDivider}rowSpan="2">Library Auditorium</td>
             <td>1:00-2:30</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>SOLO DANCE-EASTERN ROUND 1</td>
-            <td className={styles.columnDivider}>Library Auditorium</td>
             <td>2:30-4:00</td>
           </tr>
           <tr>
@@ -208,22 +198,19 @@ const Schedule = () => {
           <tr>
             <td className={styles.columnDivider}rowSpan="5">KALAKRITI</td>
             <td className={styles.columnDivider}>SKETCHORAMA - ROUND 1</td>
-            <td className={styles.columnDivider}>AB-5 207</td>
+            <td className={styles.columnDivider}rowSpan="4">AB-5 207</td>
             <td>1:00-1:30</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>SKETCHORAMA - ROUND 2</td>
-            <td className={styles.columnDivider}>AB-5 207</td>
             <td>1:30-2:00</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>SKETCHORAMA - ROUND 3</td>
-            <td className={styles.columnDivider}>AB-5 207</td>
             <td>2:00-2:30</td>
           </tr>
           <tr>
             <td className={styles.columnDivider}>SKETCHORAMA - ROUND 4</td>
-            <td className={styles.columnDivider}>AB-5 207</td>
             <td>2:30-3:00</td>
           </tr>
           <tr>
@@ -257,7 +244,7 @@ const Schedule = () => {
 
       </table>
 
-      {/* Day 4 */}
+
       <div className={styles.scheduleHeader}>
         REVELS 2024: DAY 2 (MARCH 7, 2024)
       </div>
@@ -270,16 +257,352 @@ const Schedule = () => {
             <th>Time</th>
           </tr>
         </thead>
-      </table>
+<<<<<<< HEAD
+        <tbody>
+          <tr>
+            <td className={styles.columnDivider} rowSpan="2">AMPERSAND</td>
+            <td className={styles.columnDivider}>AIRCRASH - ROUND 1</td>
+            <td className={styles.columnDivider}>AB-3 202</td>
+            <td>1:00-2:30</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>BACK TO FUTURE - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-5 206</td>
+            <td>2:30-4:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">ANIMANIA</td>
+            <td className={styles.columnDivider}>CHUNIN EXAM - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-3 203</td>
+            <td>1:00-3:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>SQUID GAMES ROUND 1</td>
+            <td className={styles.columnDivider}>Student Plaza</td>
+            <td>1:00-5:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">ANUBHUTI</td>
+            <td className={styles.columnDivider}>ANTAKSHARI - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-3 303</td>
+            <td>1:00-3:30</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>TARK VITARK - ROUND 1</td>
+            <td className={styles.columnDivider}>AB-3 302</td>
+            <td>3:30-4:30</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>CRESCENDO</td>
+            <td className={styles.columnDivider}>UNPLUGGED</td>
+            <td className={styles.columnDivider}>Student Plaza Stage</td>
+            <td>1:00-4:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">DRAMEBAAZ</td>
+            <td className={styles.columnDivider}>SPOTLIGHT</td>
+            <td className={styles.columnDivider}>AB-3 204</td>
+            <td>5:00-6:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>CURTAIN CALL - ROUND 2</td>
+            <td className={styles.columnDivider}>Library Auditorium</td>
+            <td>1:00-6:00</td>
+          </tr>
+          {/* ERGO */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="2">ERGO</td>
+              <td className={styles.columnDivider}>THE ENIGMA QUIZ - ROUND 1</td>
+              <td className={styles.columnDivider}rowSpan="2">KEF</td>
+              <td>1:00-2:30</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>THE ENIGMA QUIZ - ROUND 2</td>
+              <td>3:00-5:00</td>
+            </tr>
 
-    </div>
-  );
+            {/* FOOTLOOSE */}
+            <tr>
+              <td className={styles.columnDivider}>FOOTLOOSE</td>
+              <td className={styles.columnDivider}>GROUP DANCE</td>
+              <td className={styles.columnDivider}>AB-1 Quadrangle</td>
+              <td>4:00-6:00</td>
+            </tr>
+
+            {/* HAUTE COUTURE */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="3">HAUTE COUTURE</td>
+              <td className={styles.columnDivider}>REVELS ROYALTY - ROUND 1</td>
+              <td className={styles.columnDivider}rowSpan="2">MV Seminar Hall</td>
+              <td>1:00-6:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>REVELS ROYALTY - ROUND 2</td>
+              <td>1:00-6:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>THEME VOGUE BLITZ( Fashion show)</td>
+              <td className={styles.columnDivider}>AB-1 Quadrangle</td>
+              <td>7:30-9:00</td>
+            </tr>
+
+            {/* IRIDESCENT */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="2">IRIDESCENT</td>
+              <td className={styles.columnDivider}>JEOPARDY - ROUND 2</td>
+              <td className={styles.columnDivider}>AB-5 209, 210</td>
+              <td>4:00-5:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>NETFLIX AND NO CHILL - ROUND 2</td>
+              <td className={styles.columnDivider}>AB-5 204, 205</td>
+              <td className={styles.columnDivider}>2:00-3:00</td>
+            </tr>
+
+            {/* KALAKRITI */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="2">KALAKRITI</td>
+              <td className={styles.columnDivider}>ALPANA</td>
+              <td className={styles.columnDivider}>Outside FC-1</td>
+              <td className={styles.columnDivider}>2:00-4:30</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>ABSTRACT ART COMPETITION</td>
+              <td className={styles.columnDivider}>AB-3 402</td>
+              <td className={styles.columnDivider}>2:00-4:30</td>
+            </tr>
+
+            {/* LENSATION */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="2">LENSATION</td>
+              <td className={styles.columnDivider}>PRODUCT PHOTOGRAPHY</td>
+              <td className={styles.columnDivider}>AB-3 204</td>
+              <td className={styles.columnDivider}>2:00-4:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>PHOTO EXHIBIT - ROUND 2</td>
+              <td className={styles.columnDivider}>AB-3 lobby</td>
+              <td className={styles.columnDivider}>1:00-6:00</td>
+            </tr>
+
+            {/* XVENTURE */}
+            <tr>
+              <td className={styles.columnDivider}rowSpan="3">XVENTURE</td>
+              <td className={styles.columnDivider}>HURDLE HAVEN - DAY 2</td>
+              <td className={styles.columnDivider}>NCC Ground Behind 10th Block</td>
+              <td className={styles.columnDivider}>1:00-6:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>TRAIL AND TAIL HUNT - DAY 1</td>
+              <td className={styles.columnDivider}>Across Campus</td>
+              <td className={styles.columnDivider}>1:00-6:00</td>
+            </tr>
+            <tr>
+              <td className={styles.columnDivider}>LIGHT STRIKE - DAY 2</td>
+              <td className={styles.columnDivider}>AB-5 310B</td>
+              <td className={styles.columnDivider}>1:00-6:00</td>
+            </tr>
+          </tbody> 
 =======
-import React from "react";
+>>>>>>> 24c28e2b67d46ba5ff0cf98931123aeaa80cbb00
+      </table>
+      <div className={styles.scheduleHeader}>
+      REVELS 2024 : DAY 3 (MARCH 8, 2024)
+      </div>
+      <table className={styles.scheduleTable}>
+        <thead>
+          <tr className={styles.rowDivider}>
+            <th className={styles.columnDivider}>Category</th>
+            <th className={styles.columnDivider}>Event</th>
+            <th className={styles.columnDivider}>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* ANIMANIA */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">ANIMANIA</td>
+            <td className={styles.columnDivider}>SQUID GAMES - ROUND 2(8th)</td>
+            <td className={styles.columnDivider}>Student Plaza</td>
+            <td className={styles.columnDivider}>1:00-3:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>CHUNIN EXAM - ROUND 3</td>
+            <td className={styles.columnDivider}>AB-3 203</td>
+            <td className={styles.columnDivider}>2:00-4:00</td>
+          </tr>
 
-const Schedule = () => {
-  return <div>Schedule</div>;
->>>>>>> 7ed8d05ba70f42f3cf6e79d6610b9002658b8fed
+<<<<<<< HEAD
+          {/* ANUBHUTI */}
+          <tr>
+            <td className={styles.columnDivider}>ANUBHUTI</td>
+            <td className={styles.columnDivider}>TARK VITARK - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-3 302</td>
+            <td className={styles.columnDivider}>3:30-4:30</td>
+          </tr>
+
+          {/* CRESCENDO */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="3">CRESCENDO</td>
+            <td className={styles.columnDivider}>BIG BAND THEORY-ROUND 2</td>
+            <td className={styles.columnDivider}>AB1- Quadrangle</td>
+            <td className={styles.columnDivider}>7:30-9:00</td>
+          </tr>
+
+          {/* REVELS IDOL */}
+          <tr>
+            <td className={styles.columnDivider}>REVELS IDOL</td>
+            <td className={styles.columnDivider}rowSpan="2">Library Auditorium</td>
+            <td className={styles.columnDivider}>4:00-7:00</td>
+          </tr>
+
+          {/* ZAMIR */}
+          <tr>
+            <td className={styles.columnDivider}>ZAMIR</td>
+            <td className={styles.columnDivider}>1:00-4:00</td>
+          </tr>
+
+          {/* DRAMEBAAZ */}
+          <tr>
+            <td className={styles.columnDivider}>DRAMEBAAZ</td>
+            <td className={styles.columnDivider}>NUKKAD NATAK</td>
+            <td className={styles.columnDivider}>In front of AB-3</td>
+            <td className={styles.columnDivider}>2:00-6:00</td>
+          </tr>
+
+          {/* ERGO */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">ERGO</td>
+            <td className={styles.columnDivider}>GENERAL QUIZ - ROUND 1</td>
+            <td className={styles.columnDivider}rowSpan="2">KEF Center</td>
+            <td className={styles.columnDivider}>1:00-5:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>GENERAL QUIZ - ROUND 2</td>
+            <td className={styles.columnDivider}>1:00-5:00</td>
+          </tr>
+
+          {/* FOOTLOOSE */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="3">FOOTLOOSE</td>
+            <td className={styles.columnDivider}>STREET DANCE BATTLE- ROUND 1</td>
+            <td className={styles.columnDivider}rowSpan="3">Student Plaza</td>
+            <td className={styles.columnDivider}rowSpan="3">4:00-6:30</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>STREET DANCE BATTLE- ROUND 2</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>STREET DANCE BATTLE- ROUND 3</td>
+          </tr>
+
+          {/* HAUTE COUTURE */}
+          <tr>
+            <td className={styles.columnDivider}>HAUTE COUTURE</td>
+            <td className={styles.columnDivider}>REVELS ROYALTY - ROUND 3</td>
+            <td className={styles.columnDivider}>MV Seminar Hall</td>
+            <td className={styles.columnDivider}>1:00-7:00</td>
+          </tr>
+
+          {/* LENSATION */}
+          <tr>
+            <td className={styles.columnDivider}>LENSATION</td>
+            <td className={styles.columnDivider}>PHOTO EXHIBIT - ROUND 3</td>
+            <td className={styles.columnDivider}>AB-3 lobby</td>
+            <td className={styles.columnDivider}>1:00-7:00</td>
+          </tr>
+
+          {/* XVENTURE */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">XVENTURE</td>
+            <td className={styles.columnDivider}>TRAIL AND TAIL HUNT- DAY 2</td>
+            <td className={styles.columnDivider}>Across Campus</td>
+            <td className={styles.columnDivider}>1:00-5:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>LIGHT STRIKE- DAY 3</td>
+            <td className={styles.columnDivider}>AB-5 310B</td>
+            <td className={styles.columnDivider}>1:00-7:00</td>
+          </tr>
+        </tbody>
+        </table>
+        <div className={styles.scheduleHeader}>
+        REVELS 2024 : DAY 3 (MARCH 8, 2024)
+        </div>
+        <table className={styles.scheduleTable}>
+        <thead>
+          <tr className={styles.rowDivider}>
+            <th className={styles.columnDivider}>Category</th>
+            <th className={styles.columnDivider}>Event</th>
+            <th className={styles.columnDivider}>Venue</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {/* AMPERSAND */}
+          <tr>
+            <td className={styles.columnDivider}>AMPERSAND</td>
+            <td className={styles.columnDivider}>AIRCRASH - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-3 202</td>
+            <td className={styles.columnDivider}>2:00-3:30</td>
+          </tr>
+
+          {/* ANIMANIA */}
+          <tr>
+            <td className={styles.columnDivider}>ANIMANIA</td>
+            <td className={styles.columnDivider}>SQUID GAMES - ROUND 3</td>
+            <td className={styles.columnDivider}>Student Plaza</td>
+            <td className={styles.columnDivider}>2:30-3:30</td>
+          </tr>
+
+          {/* ANUBHUTI */}
+          <tr>
+            <td className={styles.columnDivider}>ANUBHUTI</td>
+            <td className={styles.columnDivider}>LEHZA - ROUND 2</td>
+            <td className={styles.columnDivider}>AB-3 304, 305</td>
+            <td className={styles.columnDivider}>2:00-2:30</td>
+          </tr>
+
+          {/* FOOTLOOSE */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">FOOTLOOSE</td>
+            <td className={styles.columnDivider}>SOLO DANCE-WESTERN ROUND 2</td>
+            <td className={styles.columnDivider}rowSpan="2">Library Auditorium</td>
+            <td className={styles.columnDivider}>1:00-1:45</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>SOLO DANCE-EASTERN ROUND 2</td>
+            <td className={styles.columnDivider}>2:00-2:45</td>
+          </tr>
+
+          {/* IRIDESCENT */}
+          <tr>
+            <td className={styles.columnDivider}rowSpan="2">IRIDESCENT</td>
+            <td className={styles.columnDivider}>JEOPARDY - ROUND 3</td>
+            <td className={styles.columnDivider}>AB-5 209, 210</td>
+            <td className={styles.columnDivider}>1:00-2:00</td>
+          </tr>
+          <tr>
+            <td className={styles.columnDivider}>NETFLIX AND NO CHILL - ROUND 3</td>
+            <td className={styles.columnDivider}>AB-5 204, 205</td>
+            <td className={styles.columnDivider}>2:00-3:00</td>
+          </tr>
+
+          {/* KALAKRITI */}
+          <tr>
+            <td className={styles.columnDivider}>KALAKRITI</td>
+            <td className={styles.columnDivider}>COLLAGE</td>
+            <td className={styles.columnDivider}>AB-3 402</td>
+            <td className={styles.columnDivider}>1:00-3:00</td>
+          </tr>
+        </tbody>
+
+        </table>
+=======
+>>>>>>> 24c28e2b67d46ba5ff0cf98931123aeaa80cbb00
+    </div>
+    
+  );
 };
 
 export default Schedule;
