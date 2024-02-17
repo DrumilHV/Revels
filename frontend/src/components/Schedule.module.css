@@ -1,58 +1,65 @@
 /* Schedule.module.css */
 
 .scheduleContainer {
-    background-color: #faebd7; 
-    border-radius: 16px;
-    overflow: auto;
-    border: 3px solid white;
-    width: 80%;
-    margin: 20px auto;
-    padding: 0;
-    height: 100vh;
-  }
-
+  width: 80%;
+  margin: 20px auto;
+  height: 100vh;
+  margin-bottom: 20px;
+  overflow: auto;
+}
 /* Hide the scrollbar */
 .scheduleContainer::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0em;
 }
 
 .scheduleContainer::-webkit-scrollbar-thumb {
   background-color: #faebd7; /* Adjust the color to match your container background */
 }
-  
-  .scheduleHeader {
-    text-align: center;
-    padding: 10px;
-    font-size: 24px;
-    color: #fff;
-    background-color: #deb887; 
+.dayContainer {
+  background-color: #FFFFFF4D;
+  border-radius: 16px;
+  border: 3px solid white;
+  margin-bottom: 20px; /* Adjust as needed for the space between days */
+}
+@media screen and (max-width: 768px) {
+  .dayContainer {
+    overflow-x: scroll;
   }
-  
-  .scheduleTable {
-    width: 100%;
-    margin: 0;
-    border-collapse: collapse;
-    background-color: transparent;
-  }
-  
-  .scheduleTable th,
-  .scheduleTable td {
-    text-align: center;
-    padding: 10px;
-    border: 1px solid white;
-  }
-  
-  .scheduleTable th {
-    background-color: #deb887;
-    color: white;
-  }
-  
-  .columnDivider {
-    border-right: 3px solid white;
-  }
-  
-  .rowDivider td {
-    border-bottom: 3px solid white;
-  }
+}
 
-  /* Schedule.module.css */
+.scheduleHeader {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  color: #282C52;
+  background-color: #FFFFFF4D;
+}
+
+.scheduleTable {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+.scheduleTable th,
+.scheduleTable td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid white;
+  color: #282C52;
+}
+
+.scheduleTable th {
+  background-color: #FFFFFF4D;
+  color: #282C52;
+}
+
+.columnDivider {
+  border-right: 3px solid white;
+}
+
+.rowDivider td {
+  border-bottom: 3px solid white;
+}

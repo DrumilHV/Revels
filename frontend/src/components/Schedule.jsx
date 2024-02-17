@@ -4,6 +4,8 @@ import styles from './Schedule.module.css';
 const Schedule = () => {
   return (
     <div className={styles.scheduleContainer}>
+      {/* Day 0 */}
+      <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 0 (MARCH 3, 2024)
       </div>
@@ -38,7 +40,10 @@ const Schedule = () => {
           </tr>
         </tbody>
       </table>
+      </div>
 
+    {/* Day 1 */}
+    <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 1 (MARCH 4, 2024)
       </div>
@@ -60,14 +65,16 @@ const Schedule = () => {
           </tr>
         </tbody>
       </table>
+      </div>
 
+    {/* Day 2 */}
+    <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
         PRE REVELS 2024: DAY 2 (MARCH 5, 2024)
       </div>
       <table className={styles.scheduleTable}>
         <thead>
           <tr className={styles.rowDivider}>
-            <th className={styles.columnDivider}>Category</th>
             <th className={styles.columnDivider}>Event</th>
             <th className={styles.columnDivider}>Venue</th>
             <th>Time</th>
@@ -75,20 +82,21 @@ const Schedule = () => {
         </thead>
         <tbody>
           <tr>
-            <td className={styles.columnDivider}></td>
             <td className={styles.columnDivider}>CULTURAL PARADE</td>
             <td className={styles.columnDivider}>Chemical Block Lane</td>
             <td className={styles.columnDivider}>5:00-6:15</td>
           </tr>
           <tr>
-            <td className={styles.columnDivider}></td>
             <td className={styles.columnDivider}>REVELS INAUGURAL</td>
             <td className={styles.columnDivider}>AB1 Quadrangle</td>
             <td className={styles.columnDivider}>6:30-8:00</td>
           </tr>
         </tbody>
       </table>
+      </div>
 
+    {/* Day 3 */}
+    <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
         REVELS 2024: DAY 1 (MARCH 6, 2024)
       </div>
@@ -241,10 +249,11 @@ const Schedule = () => {
             <td className={styles.columnDivider}>1:00-5:00</td>
           </tr>
         </tbody>
-
       </table>
+      </div>
 
-
+    {/* Day 4 */}
+    <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
         REVELS 2024: DAY 2 (MARCH 7, 2024)
       </div>
@@ -257,7 +266,6 @@ const Schedule = () => {
             <th>Time</th>
           </tr>
         </thead>
-<<<<<<< HEAD
         <tbody>
           <tr>
             <td className={styles.columnDivider} rowSpan="2">AMPERSAND</td>
@@ -403,9 +411,11 @@ const Schedule = () => {
               <td className={styles.columnDivider}>1:00-6:00</td>
             </tr>
           </tbody> 
-=======
->>>>>>> 24c28e2b67d46ba5ff0cf98931123aeaa80cbb00
       </table>
+      </div>
+
+    {/* Day 5*/}
+    <div className={styles.dayContainer}>
       <div className={styles.scheduleHeader}>
       REVELS 2024 : DAY 3 (MARCH 8, 2024)
       </div>
@@ -432,7 +442,6 @@ const Schedule = () => {
             <td className={styles.columnDivider}>2:00-4:00</td>
           </tr>
 
-<<<<<<< HEAD
           {/* ANUBHUTI */}
           <tr>
             <td className={styles.columnDivider}>ANUBHUTI</td>
@@ -526,6 +535,10 @@ const Schedule = () => {
           </tr>
         </tbody>
         </table>
+        </div>
+
+    {/* Day 6 */}
+    <div className={styles.dayContainer}>
         <div className={styles.scheduleHeader}>
         REVELS 2024 : DAY 3 (MARCH 8, 2024)
         </div>
@@ -598,8 +611,7 @@ const Schedule = () => {
         </tbody>
 
         </table>
-=======
->>>>>>> 24c28e2b67d46ba5ff0cf98931123aeaa80cbb00
+      </div>
     </div>
     
   );
