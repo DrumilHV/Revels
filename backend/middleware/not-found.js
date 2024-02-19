@@ -1,5 +1,5 @@
 const notFoundMiddleware = (req, res) => {
-  res.status(404).send("Route to the server does not exist");
-};
+    res.send("Route to the server does not exceed").status(404);
+}
 
 export default notFoundMiddleware;
