@@ -1,0 +1,109 @@
+.proshow-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../images/proshow_bg.png");
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 110vw 110vh;
+  overflow: hidden;
+}
+.proshow-card:hover {
+  transform: scale(1.05);
+}
+.proshow-performer {
+  font-family: "Chakra Petch";
+  letter-spacing: 2px;
+}
+.contact-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../images/about_bg.png");
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 110vw 110vh;
+}
+
+//schedule
+.schedule-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../images/events_bg.png");
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: 110vw 110vh;
+}
+
+.proshow-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #141414;
+  font-family: "Chakra Petch";
+  font-weight: 800;
+  letter-spacing: 18px;
+}
+
+.title2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: white;
+  margin: 2rem auto;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  letter-spacing: 15px;
+}
+
+.coming-soon {
+  text-align: center;
+  font-size: 7rem;
+  color: #141414;
+  margin-top: 10rem;
+  font-family: "Chakra Petch";
+  font-weight: 800;
+  letter-spacing: 18px;
+}
+
+.icons-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
+  margin: 4rem auto;
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  color: #512b36;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .proshow-title {
+    font-size: 5vw;
+    margin-top: 10vh;
+  }
+
+  .title2 {
+    font-size: 4.5vw;
+  }
+  .icons-container {
+    display: flex;
+    text-align: center;
+    width: 100vw;
+    justify-content: space-evenly;
+  }
+
+  .contact-icon {
+    margin-bottom: 2rem;
+    font-size: 10vw;
+  }
+
+  .coming-soon {
+    font-size: 12vw;
+    margin-top: 10vh;
+  }
+}

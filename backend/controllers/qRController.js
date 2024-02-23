@@ -9,10 +9,17 @@ import Entrance from "../models/Entrance.js";
 import Event from "../models/Event.js";
 import fetchData from "../utils/fetchData.js";
 import Proshow from "../models/Proshow.js";
+import CryptoJS from "crypto-js";
 
 const teamUrl = "https://api.revelsmit.in/api/v1/admin/event/team-details/";
 const individualUrl =
   "https://api.revelsmit.in/api/v1/admin/event/individual-details";
+
+const decryptPassword = (text, encryptionKey) => {
+  const bytes = CryptoJS.AES.decrypt(text, process.env.SECRET_KEY);
+  const originalText = bytes.toString(CryptoJS.enc.Utf8);
+  return originalText;
+};
 
 const findTeam = async (delegate, eventId) => {
   let page = 1;
@@ -47,26 +54,42 @@ const findIndividual = async (delegate, eventId) => {
 };
 
 const checkUser = async (delegate) => {
-  const { data } = await fetchData(
-    `https://api.revelsmit.in/api/v1/admin/user/user-list?page=1&search=${delegate}`
-  );
-  const { docs, totalDocs } = data;
-  if (totalDocs !== 1) {
-    return false;
-  }
-  if (docs[0].delegate_id !== delegate) {
-    return false;
-  }
-  return true;
+  let page = 1;
+  do {
+    const { data } = await fetchData(
+      `https://api.revelsmit.in/api/v1/admin/user/user-list?page=${page}&search=${delegate}`
+    );
+    const { docs, totalDocs } = data;
+    for (const doc of docs) {
+      if (doc.delegate_id === delegate) {
+        return true;
+      }
+    }
+    if (!data.hasNextPage) break;
+    else page++;
+  } while (true);
+  return false;
 };
 
-// const findUser = async (delegate) => {
-//   const {data} = await fetchData()
-// }
+const findProshowUser = async (delegate) => {
+  let page = 1;
+  do {
+    const { data } = await fetchData(
+      `https://api.revelsmit.in/api/v1/admin/qr-code/list?page=${page}&search=${delegate}&proshow_event_day=1&status=0`
+    );
+    const foundTeam = data.docs.find((team) => team.delegate_id === delegate);
+    if (foundTeam) {
+      return foundTeam;
+    }
+    if (!data.hasNextPage) break;
+    else page++;
+  } while (true);
+  return null;
+};
 
 export const eventEntry = async (req, res) => {
   const { QRData } = req.body;
-  const delegate = QRData;
+  let delegate = decryptPassword(QRData);
   const userId = req.user.userId;
   if (userId !== "PROSHOW123") {
     const user = await Commitee.findOne({ _id: userId });
@@ -123,13 +146,38 @@ export const eventEntry = async (req, res) => {
   }
 };
 
-// export const proshowReg = async (req, res) => {
-//   const {QRData, day} = req.body;
-//   const delegate = QRData;
-//   const days = ["day1", "day2", "day3", "test"];
-//   const ind = days.findIndex(day);
-//   if(ind===-1){
-//     throw new BadRequestError("Invalid Day, gadbad mat karo");
-//   }
-//   const
-// }
+export const proshowReg = async (req, res) => {
+  const { QRData, day } = req.body;
+  if (!QRData || !day) {
+    throw new BadRequestError("Invalid Request");
+  }
+  let delegate = decryptPassword(QRData);
+  const days = ["day1", "day2", "day3", "test"];
+  const ind = days.findIndex((d) => d === day);
+  if (ind === -1) {
+    throw new BadRequestError("Invalid Day, gadbad mat karo");
+  }
+  const ProshowExists = await Proshow.findOne({ delegate_id: delegate });
+  if (ProshowExists) {
+    if (ProshowExists[day] === true) {
+      throw new BadRequestError("Already Registered for the event");
+    }
+    ProshowExists[day] = true;
+    await ProshowExists.save();
+    res.status(StatusCodes.OK).json({
+      msg: `Succesfully Registered ${ProshowExists.full_name} for ${day}`,
+    });
+  } else {
+    const newProshow = await findProshowUser(delegate);
+    if (!newProshow) {
+      throw new BadRequestError("Please buy the Proshow pass first");
+    } else {
+      let user = { ...newProshow };
+      user[day] = true;
+      await Proshow.create(user);
+      res.status(StatusCodes.OK).json({
+        msg: `Succesfully Registered ${ProshowExists.full_name} for ${day}`,
+      });
+    }
+  }
+};

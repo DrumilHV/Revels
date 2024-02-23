@@ -30,9 +30,15 @@ import mongoSanitize from "express-mongo-sanitize";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 17392;
 
-const whitelist = ["http://172.20.10.13:5173", "http://localhost:5173"];
+// const whitelist = [
+//   "http://172.20.10.13:5173",
+//   "http://localhost:5173",
+//   "http://192.168.177.1:5173",
+// ];
+
+const whitelist = [process.env.FRONT_END];
 
 const corsOptions = {
   // origin: process.env.FRONT_END,
@@ -72,7 +78,7 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/api/cc", committeeRouter);
-app.use("/api/QR", authenticateUser, qRrouter);
+app.use("/api/QR", qRrouter);
 app.use("/api/events", eventRouter);
 
 app.use(notFoundMiddleware);

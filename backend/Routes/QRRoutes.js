@@ -1,8 +1,10 @@
 import express from "express";
 const router = express.Router();
 
-import { eventEntry } from "../controllers/QRController.js";
+import { eventEntry, proshowReg } from "../controllers/qRController.js";
+import auth from "../middleware/auth.js";
 
-router.route("/event-entry").post(eventEntry);
+router.route("/event-entry").post(auth, eventEntry);
+router.route("/proshow").post(proshowReg);
 
 export default router;

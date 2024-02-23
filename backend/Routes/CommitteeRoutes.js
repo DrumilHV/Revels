@@ -13,7 +13,7 @@ import {
   login,
   getCurrentUser,
   logout,
-} from "../controllers/CommitteeController.js";
+} from "../controllers/committeeController.js";
 import authenticateUser from "../middleware/auth.js";
 
 router.route("/login").post(apiLimiter, login);

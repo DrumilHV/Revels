@@ -1,0 +1,1248 @@
+[
+  {
+    "categories": [
+      {
+        "category_name": "PRE REVELS EVENTS",
+        "events": [
+          {
+            "_id": "65c62a06a1d1c1f0a1f5804c",
+            "category_id": "63fce8070e92ad0cc9d9c8eb",
+            "event_name": "CURTAIN CALL (DRAMEBAAZ)",
+            "event_type": "OFFLINE",
+            "event_desc": "Art and self-expression, the tools of our time, come to their pinnacle in the\ntheater. With immaculate expressions and extensive exuberance, bring the stage to life. Make it yours and evolve from being to an ethereal form remembered for eons. Perform and make some magic",
+            "team_type": true,
+            "team_size_min": 15,
+            "event_date": "2024-03-03T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "Library Auditorium",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 0,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "65c61985a1d1c1f0a1f57c1e",
+            "category_id": "63fce8070e92ad0cc9d9c8eb",
+            "event_name": "ROCK MOB (CRESCENDO)",
+            "event_type": "OFFLINE",
+            "event_desc": "To mark the beginning of Revels, Crescendo presents Rock Mob! Join us at Student Plaza as a mob of musicians showcase a medley of rock music.",
+            "team_type": true,
+            "team_size_min": 12,
+            "event_date": "2024-03-03T14:30:00.000Z",
+            "event_time": "20:00",
+            "venue_name": "Student Plaza",
+            "venue_longitude": "74.79328",
+            "venue_latitude": "13.34736",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "WORKSHOP",
+        "events": [
+          {
+            "_id": "65cb22015394c8c491f726ee",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "CALLIGRAPHY",
+            "event_type": "OFFLINE",
+            "event_desc": "Calligraphy",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-04T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "AB3",
+            "venue_longitude": "74.79293267584144",
+            "venue_latitude": "13.351345992518686",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb21ae95422c8ca94c03c4",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "ASTROPHOTOGRAPHY",
+            "event_type": "OFFLINE",
+            "event_desc": "Astrophotography",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-05T15:30:00.000Z",
+            "event_time": "21:00",
+            "venue_name": "MIT Ground",
+            "venue_longitude": "74.79394458680181",
+            "venue_latitude": "13.34404989317931",
+            "event_amount": 100,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb212795422c8ca94c03bd",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "KANNADA LEARNING WORKSHOP",
+            "event_type": "OFFLINE",
+            "event_desc": "Learn to speak Kannada",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-02T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "AB3",
+            "venue_longitude": "74.79293267584144",
+            "venue_latitude": "13.351345992518686",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb20aa5394c8c491f726d9",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "HENNA ART",
+            "event_type": "OFFLINE",
+            "event_desc": "Henna Art",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-04T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "AB3",
+            "venue_longitude": "74.79293267584144",
+            "venue_latitude": "13.351345992518686",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb20105394c8c491f726cd",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "BALL DANCING",
+            "event_type": "OFFLINE",
+            "event_desc": "Ball Dancing",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-04T13:00:00.000Z",
+            "event_time": "18:30",
+            "venue_name": "AB1 Quadrangle",
+            "venue_longitude": "74.7928238132138",
+            "venue_latitude": "13.352592282456184",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb1f9195422c8ca94c03ac",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "TRIP PLANNING",
+            "event_type": "OFFLINE",
+            "event_desc": "Trip Planning",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-03T03:30:00.000Z",
+            "event_time": "09:00",
+            "venue_name": "AB3",
+            "venue_longitude": "74.79293267584144",
+            "venue_latitude": "13.351345992518686",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb1f075394c8c491f726b7",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "CHILDHOOD GAMES",
+            "event_type": "OFFLINE",
+            "event_desc": "Childhood Games",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-02T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "Student Plaza",
+            "venue_longitude": "74.7933119294817",
+            "venue_latitude": "13.34733850215127",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb1e6e5394c8c491f726ae",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "ORIGAMI",
+            "event_type": "OFFLINE",
+            "event_desc": "Origami",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-02T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "AB3",
+            "venue_longitude": "74.79293267584144",
+            "venue_latitude": "13.351345992518686",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          },
+          {
+            "_id": "65cb1d7595422c8ca94c037f",
+            "category_id": "63fb6ef21dae3aee3d06ddbe",
+            "event_name": "STANDUP SCRIPT WRITING",
+            "event_type": "OFFLINE",
+            "event_desc": "Standup Script Writing",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-04T12:00:00.000Z",
+            "event_time": "17:30",
+            "venue_name": "MV Seminar Hall",
+            "venue_longitude": "74.79346396368048",
+            "venue_latitude": "13.35256666036534",
+            "event_amount": 0,
+            "event_judge": false,
+            "event_status": "STOP_REGISTRATION",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "TUG OF WAR",
+        "events": [
+          {
+            "_id": "63f869b061d0d1813088fa42",
+            "category_id": "63f7b3ac1dae3aee3d06d6a1",
+            "event_name": "TUG OF WAR (MEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Tug of war is a sport in which twiteams pull on opposite ends of a rope, with the goal being to bring the rope a certain distance in one direction against the force of the opposing team's pull.",
+            "team_type": true,
+            "team_size_min": 7,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "Above Hockey Ground",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 500,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "CHESS(MIT)",
+        "events": [
+          {
+            "_id": "63f7bb5c61d0d1813088f918",
+            "category_id": "63f7b39b1dae3aee3d06d69d",
+            "event_name": "CHESS (MEN AND WOMEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Chess is an abstract strategy game . It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT CAMPUS",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 100,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "BASKETBALL(MIT)",
+        "events": [
+          {
+            "_id": "63f8695c61d0d1813088fa3e",
+            "category_id": "63f7b38e1dae3aee3d06d699",
+            "event_name": "BASKETBALL (WOMEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Basketball is a team sport in which two teams, compete with the primary objective of shooting a basketball through the defender's hoop.\nThis is an event only for MIT Students.",
+            "team_type": true,
+            "team_size_min": 5,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Basketball Courts",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 500,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f86923491ffc93f6e07cdb",
+            "category_id": "63f7b38e1dae3aee3d06d699",
+            "event_name": "BASKETBALL (MEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Basketball is a team sport in which two teams, compete with the primary objective of shooting a basketball through the defender's hoop.",
+            "team_type": true,
+            "team_size_min": 5,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Basketball Courts",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 500,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "FUTSAL",
+        "events": [
+          {
+            "_id": "63f868811dae3aee3d06d7ee",
+            "category_id": "63f7b370491ffc93f6e07b7c",
+            "event_name": "FUTSAL (MEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Futsal is a football-based game played on a hard court smaller than a football pitch, and mainly indoors.",
+            "team_type": true,
+            "team_size_min": 6,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Hockey Ground",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 600,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "BOX CRICKET",
+        "events": [
+          {
+            "_id": "63f7b61561d0d1813088f8e8",
+            "category_id": "63f7b2d91dae3aee3d06d68d",
+            "event_name": "BOX CRICKET (MEN)(MIT STUDENTS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Box cricket or indoor cricket is a variant of cricket with added enhancements to improve the engagement and enjoyment of casual players.",
+            "team_type": true,
+            "team_size_min": 7,
+            "event_date": "2024-03-05T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "In front of Block 9",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 500,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "THROWBALL",
+        "events": [
+          {
+            "_id": "63f7ae41491ffc93f6e07b07",
+            "category_id": "63f7a28a491ffc93f6e07a8a",
+            "event_name": "THROWBALL (WOMEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Throwball is a non-contact ball sport played across a net between two teams of nine players on a rectangular court.",
+            "team_type": true,
+            "team_size_min": 7,
+            "event_date": "2024-04-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT GROUND",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 2543,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "ATHLETICS",
+        "events": [
+          {
+            "_id": "63f7be351dae3aee3d06d6ee",
+            "category_id": "63f7a27b1dae3aee3d06d5a2",
+            "event_name": "ATHLETICS (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Athletics is a group of sporting events that involves competitive running, jumping, throwing, and walking.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Athletics Ground",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 594,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7aa121dae3aee3d06d5ef",
+            "category_id": "63f7a27b1dae3aee3d06d5a2",
+            "event_name": "ATHLETICS (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Athletics is a group of sporting events that involves competitive running, jumping, throwing, and walking.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Athletics Ground",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 594,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "LAWN TENNIS",
+        "events": [
+          {
+            "_id": "65c62a811e179ccf31b8ea6b",
+            "category_id": "63f7a269d6beb8abdea78f73",
+            "event_name": "LAWN TENNIS MIXED DOUBLES(NON-MIT)",
+            "event_type": "OFFLINE",
+            "event_desc": "MAX TWO TEAMS FROM EACH UNIVERSITY",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT RECREATION CENTER",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": 509,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7bda3d6beb8abdea790c6",
+            "category_id": "63f7a269d6beb8abdea78f73",
+            "event_name": "LAWN TENNIS (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Tennis is a racket sport in which a  tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Recreation Center",
+            "venue_longitude": "74.794594",
+            "venue_latitude": "13.344776",
+            "event_amount": 2543,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7a710491ffc93f6e07abf",
+            "category_id": "63f7a269d6beb8abdea78f73",
+            "event_name": "LAWN TENNIS (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Tennis is a racket sport in which a  tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "Recreation Center",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 1271,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "SQUASH",
+        "events": [
+          {
+            "_id": "63f7bcff61d0d1813088f92b",
+            "category_id": "63f7a255d6beb8abdea78f6f",
+            "event_name": "SQUASH (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Squash is a racket-and-ball sport played by two or four players in a four-walled court with a small, hollow, rubber ball.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "Marena Sports Complex",
+            "venue_longitude": "74.78980183109388",
+            "venue_latitude": "13.355709648087354",
+            "event_amount": 2967,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "HOCKEY",
+        "events": [
+          {
+            "_id": "63f7bbb861d0d1813088f91d",
+            "category_id": "63f7a22fd6beb8abdea78f6b",
+            "event_name": "HOCKEY (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Teams play against each other by trying to manoeuvre the object of play, either a type of ball or a disk (such as a puck), into the opponent's goal using a hockey stick.",
+            "team_type": true,
+            "team_size_min": 11,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Hockey Field",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 6780,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7a7a2d6beb8abdea78fb8",
+            "category_id": "63f7a22fd6beb8abdea78f6b",
+            "event_name": "HOCKEY (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Teams play against each other by trying to maneuver the object of play, either a type of ball or a disk (such as a puck), into the opponent's goal using a hockey stick.",
+            "team_type": true,
+            "team_size_min": 11,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Hockey Field",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 3390,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "TABLE TENNIS",
+        "events": [
+          {
+            "_id": "65c62a0ca1d1c1f0a1f58052",
+            "category_id": "63f7a21cd6beb8abdea78f67",
+            "event_name": "TABLE TENNIS MIXED DOUBLES(NON-MIT)",
+            "event_type": "OFFLINE",
+            "event_desc": "MAX OF TWO TEAMS FROM ONE UNIVERSITY",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT RECREATION CENTER",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": 509,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7bb4dd6beb8abdea790a6",
+            "category_id": "63f7a21cd6beb8abdea78f67",
+            "event_name": "TABLE TENNIS (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Table tennis, is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table",
+            "team_type": true,
+            "team_size_min": 4,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Recreation Center",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 2543,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7ad40d6beb8abdea78fea",
+            "category_id": "63f7a21cd6beb8abdea78f67",
+            "event_name": "TABLE TENNIS (WOMEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Table tennis, is a racket sport derived from tennis but distinguished by its playing surface being atop a stationary table.",
+            "team_type": true,
+            "team_size_min": 4,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Recreation Center",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 1695,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "VOLLEYBALL",
+        "events": [
+          {
+            "_id": "63f7bac4491ffc93f6e07bb9",
+            "category_id": "63f7a1f61dae3aee3d06d59a",
+            "event_name": "VOLLEYBALL (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Volleyball is a team sport in which Each team tries to score points by grounding a ball on the other team's court under organized rules.",
+            "team_type": true,
+            "team_size_min": 6,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Volleyball Court",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 3390,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7ab0a491ffc93f6e07ae6",
+            "category_id": "63f7a1f61dae3aee3d06d59a",
+            "event_name": "VOLLEYBALL (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Volleyball is a team sport in which Each team tries to score points by grounding a ball on the other team's court under organized rules.",
+            "team_type": true,
+            "team_size_min": 6,
+            "event_date": "2023-03-18T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Volleyball Court",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 1695,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "SWIMMING",
+        "events": [
+          {
+            "_id": "63f7ba3b491ffc93f6e07baf",
+            "category_id": "63f7a1e21dae3aee3d06d596",
+            "event_name": "SWIMMING (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Swimming is an individual or team racing sport that requires the use of one's entire body to move through water.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Swimming Pool",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 509,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7a92661d0d1813088f81f",
+            "category_id": "63f7a1e21dae3aee3d06d596",
+            "event_name": "SWIMMING (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Swimming is an individual or team racing sport that requires the use of one's entire body to move through water.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Swimming Pool",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 509,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "FOOTBALL",
+        "events": [
+          {
+            "_id": "63f7b96661d0d1813088f901",
+            "category_id": "63f7a1ced6beb8abdea78f60",
+            "event_name": "FOOTBALL (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Football is a family of team sports that involve, kicking a ball to score a goal.",
+            "team_type": true,
+            "team_size_min": 11,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Grounds",
+            "venue_longitude": "74.793274",
+            "venue_latitude": "13.342573",
+            "event_amount": 10170,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7abd161d0d1813088f836",
+            "category_id": "63f7a1ced6beb8abdea78f60",
+            "event_name": "FOOTBALL (WOMEN) (NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Football is a family of team sports that involve, kicking a ball to score a goal.",
+            "team_type": true,
+            "team_size_min": 7,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Grounds",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": 5085,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "CHESS",
+        "events": [
+          {
+            "_id": "63f7b56d61d0d1813088f8de",
+            "category_id": "63f7a1bfd6beb8abdea78f5c",
+            "event_name": "CHESS (MEN AND WOMEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Chess is an abstract strategy game . It is played on a chessboard with 64 squares arranged in an eight-by-eight grid.",
+            "team_type": true,
+            "team_size_min": 4,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT CAMPUS",
+            "venue_longitude": "74.79338469071467",
+            "venue_latitude": "13.353437300793768",
+            "event_amount": 424,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "BASKETBALL",
+        "events": [
+          {
+            "_id": "65c6213ca1d1c1f0a1f57cf6",
+            "category_id": "63f7a1add6beb8abdea78f58",
+            "event_name": "BASKETBALL(WOMEN)(NON-MIT)",
+            "event_type": "OFFLINE",
+            "event_desc": "Baketball for women\n(non mit)",
+            "team_type": true,
+            "team_size_min": 5,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT BASKETBALL COURT",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": 5933,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7b3f961d0d1813088f8d4",
+            "category_id": "63f7a1add6beb8abdea78f58",
+            "event_name": "BASKETBALL (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Basketball is a team sport in which two teams,compete with the primary objective of shooting a basketball through the defender's hoop",
+            "team_type": true,
+            "team_size_min": 5,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Basketball Courts",
+            "venue_longitude": "74.794778",
+            "venue_latitude": "13.342797",
+            "event_amount": 6780,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "CRICKET",
+        "events": [
+          {
+            "_id": "63f7b157d6beb8abdea79057",
+            "category_id": "63f7a15bd6beb8abdea78f50",
+            "event_name": "CRICKET (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Cricket is a bat-and-ball game played between two teams. The batting side scores runs by striking the ball bowled while the bowling and fielding side tries to prevent this",
+            "team_type": true,
+            "team_size_min": 11,
+            "event_date": "2024-03-06T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Cricket Field",
+            "venue_longitude": "74.794122",
+            "venue_latitude": "13.343858",
+            "event_amount": 10170,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "BADMINTON",
+        "events": [
+          {
+            "_id": "65c629b1a1d1c1f0a1f58041",
+            "category_id": "63f7a12bd6beb8abdea78f48",
+            "event_name": "BADMINTON MIXED DOUBLES(NON-MIT)",
+            "event_type": "OFFLINE",
+            "event_desc": "MAX TWO TEAMS FROM ONE UNIVERSITY",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT RECREATION CENTER",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": 510,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "65c628bd1e179ccf31b8ea51",
+            "category_id": "63f7a12bd6beb8abdea78f48",
+            "event_name": "BADMINTON(WOMEN)(NON MIT ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "WOMEN EVENT",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT RECREATION CENTER",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": 2118,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f7ae33d6beb8abdea78ff2",
+            "category_id": "63f7a12bd6beb8abdea78f48",
+            "event_name": "BADMINTON (MEN)(NON-MIT REGISTRATIONS ONLY)",
+            "event_type": "OFFLINE",
+            "event_desc": "Badminton is a racquet sport played using racquets to hit a shuttlecock across a net.",
+            "team_type": true,
+            "team_size_min": 4,
+            "event_date": "2024-03-01T02:30:00.000Z",
+            "event_time": "08:00",
+            "venue_name": "MIT Recreation Center",
+            "venue_longitude": "74.794594",
+            "venue_latitude": "13.344776",
+            "event_amount": 2966,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      }
+    ],
+    "category_type": "SPORTS AND WORKSHOPS"
+  },
+  {
+    "categories": [
+      {
+        "category_name": "XVENTURE-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c624491e179ccf31b8e8ab",
+            "category_id": "63f5b5dd6901fd20c5ad7a4d",
+            "event_name": "LIGHT STRIKE",
+            "event_type": "OFFLINE",
+            "event_desc": "Step into the next level of laser tag excitement as traditional laser guns are replaced with innovative gel blasters, adding a new dimension of realism to the battlefield. This high-energy event will take you to a neon-soaked arena, where the glow of your gear and the thrill of the game combine for an unforgettable night of laser tag excitement. Each game session involves a team of six players entering a designated area.",
+            "team_type": true,
+            "team_size_min": 3,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB5 310B",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "LENSATION-FLAGSHIP",
+        "events": [
+          {
+            "_id": "63f6558ae90d80f524c48d06",
+            "category_id": "63f5b56a1c2feb1ef97b3e30",
+            "event_name": "PRODUCT PHOTOGRAPHY",
+            "event_type": "OFFLINE",
+            "event_desc": "This event will primarily consist of participants photographing the products provided by us and the result is expected to be pleasing and advertisable. Groups of 2 or 3 may be formed depending on the choice of participants, and each participating team is given a product. Each team is given 45 minutes to shoot necessary pictures and another 45 minutes are given for editing, if required by the team.\nPrize: Rs.2000",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-07T08:30:00.000Z",
+            "event_time": "14:00",
+            "venue_name": "AB3-204",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "KALAKRITI-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c62b13a1d1c1f0a1f58085",
+            "category_id": "63f5b5486901fd20c5ad7a44",
+            "event_name": "ABSTRACT ART COMPETITION",
+            "event_type": "OFFLINE",
+            "event_desc": "Abstract Art is all about celebrating the diverse and innovative expressions within\nthe realm of abstract visual art.",
+            "team_type": true,
+            "team_size_min": 1,
+            "event_date": "2024-03-07T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3 - 402",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "65c62588a1d1c1f0a1f57f1b",
+            "category_id": "63f5b5486901fd20c5ad7a44",
+            "event_name": "SKETCHORAMA",
+            "event_type": "OFFLINE",
+            "event_desc": "Sketchorama is a competition for a team. So get your friends and indulge in a\nthrilling experience that is sure to leave you pumped throughout the event. The\nteam will attempt to finish a drawing in 4 parts, without having discussed it\nbeforehand. A prompt will be given to the first person and the others will have to\ninterpret and finish it.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB-5 207",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "IRIDESCENT-FLAGSHIP",
+        "events": [
+          {
+            "_id": "63f5e0081c2feb1ef97b3ebc",
+            "category_id": "63f5b51b6901fd20c5ad7a3c",
+            "event_name": "NETFLIX AND NO CHILL",
+            "event_type": "OFFLINE",
+            "event_desc": "This event will look to test\nparticipants’ knowledge of some of the most popular TV shows and movies of our time, such\nas Brooklyn 99, The Office, How I Met Your Mother, and Friends. There will be a mixture of 5-6 shows of different genres\nappearing in all the 3 rounds. Teams will complete certain mini-games and\nanswer extremely in-depth trivia about the TV shows and movies.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-06T08:30:00.000Z",
+            "event_time": "14:00",
+            "venue_name": "AB5 - 204, 205",
+            "venue_longitude": "74.79342",
+            "venue_latitude": "13.35358",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "HAUTE COUTURE-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c63406a1d1c1f0a1f582c5",
+            "category_id": "63f5b4f6e90d80f524c48a59",
+            "event_name": "THEME VOGUE BLITZ",
+            "event_type": "OFFLINE",
+            "event_desc": "\"A single-round team event where the teams perform a ramp walk based on the theme of the event and are asked questions about the same. The winner is decided by a panel of judges.\n\"",
+            "team_type": true,
+            "team_size_min": 8,
+            "event_date": "2024-03-07T14:00:00.000Z",
+            "event_time": "19:30",
+            "venue_name": "AB1 Quadrangle",
+            "venue_longitude": "74.79281716380662",
+            "venue_latitude": "13.351913386916834",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "FOOTLOOSE-FLAGSHIP",
+        "events": [
+          {
+            "_id": "63f659bde90d80f524c48d2a",
+            "category_id": "63f5b4741c2feb1ef97b3e14",
+            "event_name": "GROOVE-GROUP DANCE",
+            "event_type": "OFFLINE",
+            "event_desc": "Prize pool: 30000 | For more information regarding the event, find the rules at  https://drive.google.com/drive/u/8/folders/1vSpOjolw5hv35m3Uku-GHdz3mNYDtPQf\nVenue, Date and Time is subject to change | This is a Western dance competition where groups of dancers (with a minimum of six and a maximum of twenty members) compete against each other to get their hands on the cash prize.",
+            "team_type": true,
+            "team_size_min": 6,
+            "event_date": "2024-03-08T14:00:00.000Z",
+            "event_time": "19:30",
+            "venue_name": "MIT Quadrangle (AB1)",
+            "venue_longitude": "74.2928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "ERGO-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c63601a1d1c1f0a1f582db",
+            "category_id": "63f5b3f31c2feb1ef97b3e05",
+            "event_name": "MITDT",
+            "event_type": "ONLINE",
+            "event_desc": "A national-level debate tournament that follows the British Parliamentary format.\nRecognized debaters from all over the country participate in multiple rounds to\nprove their argumentation and make their way to the top. Nuanced motions and\nthrilling back-and-forths make MITDT the wild ride that it is.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "Online",
+            "venue_longitude": "744659.99",
+            "venue_latitude": "132060",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "DRAMEBAAZ-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c623801e179ccf31b8e846",
+            "category_id": "63f5b3921c2feb1ef97b3df9",
+            "event_name": "NUKKAD NATAK",
+            "event_type": "OFFLINE",
+            "event_desc": "The most energetic form of theatre is where teams try to spread awareness about a\nsocial cause on top of their voices amongst a gathered audience. This is one of the\nhighlight events of the festival.",
+            "team_type": true,
+            "team_size_min": 10,
+            "event_date": "2024-03-08T08:30:00.000Z",
+            "event_time": "14:00",
+            "venue_name": "In front of Ab3",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "65c622f41e179ccf31b8e81b",
+            "category_id": "63f5b3921c2feb1ef97b3df9",
+            "event_name": "CURTAIN CALL",
+            "event_type": "OFFLINE",
+            "event_desc": "Art and self-expression, the tools of our time, come to their pinnacle in the\ntheater. With immaculate expressions and extensive exuberance, bring the stage\nto life. Make it yours and evolve from being to an ethereal form remembered for\neons. Perform and make some magic.",
+            "team_type": true,
+            "team_size_min": 5,
+            "event_date": "2024-03-07T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "Library Auditorium",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "CRESCENDO-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c6188c1e179ccf31b8e5d6",
+            "category_id": "63f5b2e81c2feb1ef97b3de8",
+            "event_name": "THE BIG BAND THEORY",
+            "event_type": "OFFLINE",
+            "event_desc": "The crash of a cymbal, the thump of a bass, the bend of a guitar, and the deafening din of the crowd. If these words sound like home to you, the Revels '24 Battle of the Bands- The Big Band Theory'' stage is exactly where you can experience this. With adrenaline pumping through your veins, blow the roof off in this final Grandstand.",
+            "team_type": true,
+            "team_size_min": 4,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB1 Quadrangle Stage",
+            "venue_longitude": "74.79283",
+            "venue_latitude": "13.35212",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "ANUBHUTI-FLAGSHIP",
+        "events": [
+          {
+            "_id": "63f5ff15b80f7e5877c2ccd7",
+            "category_id": "63f5a0e46901fd20c5ad79bd",
+            "event_name": "ANTAKSHRI",
+            "event_type": "OFFLINE",
+            "event_desc": "Prize pool: 11500 | For more information regarding the event, find the rules in rule book  Venue, Date and Time is subject to change | Bollywood has always been a medium for all of us to express our emotions and intentions. It has always played an instrumental role in helping us know what we feel, how we feel, and why we feel. In layman's terms, Bollywood is our life, and our life is Bollywood!",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "ANIMANIA-FLAGSHIP",
+        "events": [
+          {
+            "_id": "65c638731e179ccf31b8ec95",
+            "category_id": "63f59d2fb80f7e5877c2caf8",
+            "event_name": "CHUNNIN EXAMS",
+            "event_type": "OFFLINE",
+            "event_desc": "The path to success isn't an easy one, and this must be ingrained into a ninja's mind. Conquering mental challenges and hunts, are you trained enough to be one of Konoha's chunins? Referencing The Chunin Exam from Naruto, an exam round will be followed by tasks and a treasure hunt.",
+            "team_type": true,
+            "team_size_min": 1,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3 203",
+            "venue_longitude": "74.79",
+            "venue_latitude": "13.35",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "AMPERSAND-FLAGSHIP",
+        "events": [
+          {
+            "_id": "63f5f89f6901fd20c5ad7b19",
+            "category_id": "63f59d191c2feb1ef97b3d52",
+            "event_name": "AIRCRASH",
+            "event_type": "OFFLINE",
+            "event_desc": "Venue, Date and Time is subject to change | An individual event, where participants represent various fictitious/non-fictitious characters and convincingly persuade the judges that they are the most deserving of the one parachute left in a plane that is about to crash.",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-07T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3-202",
+            "venue_longitude": "12",
+            "venue_latitude": "12",
+            "event_amount": null,
+            "event_judge": true,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      }
+    ],
+    "category_type": "FLAGSHIP"
+  },
+  {
+    "categories": [
+      {
+        "category_name": "XVENTURE",
+        "events": [
+          {
+            "_id": "641c179660d9008094bf05cd",
+            "category_id": "63f5b5cee90d80f524c48a68",
+            "event_name": "HURDLE HAVEN",
+            "event_type": "OFFLINE",
+            "event_desc": "Teams of 2 are put through spree of challenges and endurance tests that rile up the inner warrior inside you to get past them and get to the finish line first. With the timer breathing down your neck and the course demanding everything that you’ve got within you, this event really tests you both mentally and physically and demands you to give your everything.",
+            "team_type": true,
+            "team_size_min": 2,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "NCC Ground",
+            "venue_longitude": "10",
+            "venue_latitude": "10",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          },
+          {
+            "_id": "63f60fe11c2feb1ef97b4003",
+            "category_id": "63f5b5cee90d80f524c48a68",
+            "event_name": "TRAIL AND TAIL",
+            "event_type": "OFFLINE",
+            "event_desc": "Get ready to sharpen your clue-solving skills in our thrilling challenge! Time to navigate the campus, tackling an array of mind-bending tasks and intricate challenges to unveil the next clue. Race against time, decode clues, and be the first two teams to finish the entire hunt, abiding by all the rules, to claim victory!\nPrize pool: 10000",
+            "team_type": true,
+            "team_size_min": 1,
+            "event_date": "2024-03-07T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3-403",
+            "venue_longitude": "74.7868",
+            "venue_latitude": "13.3524",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      },
+      {
+        "category_name": "LENSATION",
+        "events": [
+          {
+            "_id": "63f6576d6901fd20c5ad7ce8",
+            "category_id": "63f5b55a1c2feb1ef97b3e2c",
+            "event_name": "PHOTO STORIES",
+            "event_type": "OFFLINE",
+            "event_desc": "This event combines Spot Photography with the element of storytelling. Participants will be gathered and given a genre on the spot, after which they will have 1 hour to use their photography to tell a story containing the genre. A minimum of 3 photos is required to submit as a story. \nPrize: Rs. 2000",
+            "team_type": false,
+            "team_size_min": null,
+            "event_date": "2024-03-06T07:30:00.000Z",
+            "event_time": "13:00",
+            "venue_name": "AB3 - 204,205",
+            "venue_longitude": "74.7928",
+            "venue_latitude": "13.3525",
+            "event_amount": null,
+            "event_judge": false,
+            "event_status": "ONGOING",
+            "__v": 0
+          }
+        ]
+      }
+    ]
+  }
+]

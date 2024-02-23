@@ -1,0 +1,64 @@
+/* Schedule.module.css */
+
+.scheduleContainer {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 20px;
+  /* overflow: auto; */
+}
+/* Hide the scrollbar */
+.scheduleContainer::-webkit-scrollbar {
+  width: 0em;
+}
+
+.scheduleContainer::-webkit-scrollbar-thumb {
+  background-color: #faebd7; /* Adjust the color to match your container background */
+}
+.dayContainer {
+  background-color: #ffffff4d;
+  border-radius: 16px;
+  border: 3px solid white;
+  margin-bottom: 20px; /* Adjust as needed for the space between days */
+}
+@media screen and (max-width: 768px) {
+  .dayContainer {
+    overflow-x: scroll;
+  }
+}
+
+.scheduleHeader {
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  color: #282c52;
+  background-color: #ffffff4d;
+}
+
+.scheduleTable {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+  overflow-x: auto;
+}
+
+.scheduleTable th,
+.scheduleTable td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid white;
+  color: #282c52;
+}
+
+.scheduleTable th {
+  background-color: #ffffff4d;
+  color: #282c52;
+}
+
+.columnDivider {
+  border-right: 3px solid white;
+}
+
+td .rowDivider {
+  border-bottom: 3px solid white;
+}

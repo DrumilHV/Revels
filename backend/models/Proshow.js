@@ -5,22 +5,13 @@ const ProwshowSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide Delegate ID"],
   },
-  full_name: {
+  user_name: {
     type: String,
     required: [true, "Please provide Delegate Name"],
-  },
-  email: {
-    type: String,
-    required: [true, "Please provide Delegate email"],
   },
   enrollment_number: {
     type: String,
     required: [true, "Please provide enrollment number"],
-  },
-  user_type: {
-    type: String,
-    enum: ["MAHE", "NONMAHE"],
-    required: [true, "Please provide user type"],
   },
   day1: {
     type: Boolean,

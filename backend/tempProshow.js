@@ -26,6 +26,7 @@ async function migrateDatabase() {
       doc.created_at = undefined;
       doc.user_id = undefined;
       doc.mobile = undefined;
+      doc.user_name = doc.full_name;
       return doc;
     });
     await Proshow.insertMany(proshows);
@@ -36,4 +37,4 @@ async function migrateDatabase() {
 }
 migrateDatabase();
 
-const proshowUrl = "https://api.revelsmit.in/api/v1/admin/user/user-list";
+const proshowUrl = "https://dev-api.revelsmit.in/api/v1/admin/user/user-list";

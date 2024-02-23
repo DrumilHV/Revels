@@ -11,11 +11,17 @@ import {
   GET_CATEGORIES_SUCCESS,
   GET_CURRENT_USER_BEGIN,
   GET_CURRENT_USER_SUCCESS,
+  GET_EVENTS_BEGIN,
+  GET_EVENTS_ERROR,
+  GET_EVENTS_SUCCESS,
   KEEP_SCANNING,
   LOGIN_USER_BEGIN,
   LOGIN_USER_ERROR,
   LOGIN_USER_SUCCESS,
   LOGOUT_USER,
+  REGISTER_PROSHOW_BEGIN,
+  REGISTER_PROSHOW_ERROR,
+  REGISTER_PROSHOW_SUCCESS,
   USER_ENTRY_BEGIN,
   USER_ENTRY_ERROR,
   USER_ENTRY_SUCCESS,
@@ -32,9 +38,11 @@ export const initialState = {
   showAlert: false,
   categoriesData: null,
   categoryLoading: false,
+  eventData: null,
+  eventDataLoading: false,
 };
 
-const baseUrl = "http://172.20.10.13:8080";
+const baseUrl = import.meta.env.VITE_SERVER_URL;
 
 const AppContext = React.createContext();
 
@@ -105,6 +113,29 @@ export const AppProvider = ({ children }) => {
         },
       });
     }
+  };
+
+  const registerQR = async (body) => {
+    dispatch({ type: REGISTER_PROSHOW_BEGIN });
+    try {
+      const { data } = await axios.post(`${baseUrl}/api/QR/proshow`, body);
+      const { msg } = data;
+      dispatch({
+        type: REGISTER_PROSHOW_SUCCESS,
+        payload: {
+          msg,
+        },
+      });
+    } catch (err) {
+      console.log(err.response.data.msg),
+        dispatch({
+          type: REGISTER_PROSHOW_ERROR,
+          payload: {
+            msg: err.response.data.msg,
+          },
+        });
+    }
+    clearAlert();
   };
 
   const UserEntry = async (QRData) => {
@@ -188,6 +219,16 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  const getEventData = async () => {
+    dispatch({ type: GET_EVENTS_BEGIN });
+    try {
+      const { data } = await axios.get(`${baseUrl}/api/events/details`);
+      dispatch({ type: GET_EVENTS_SUCCESS, payload: { eventData: data } });
+    } catch (err) {
+      dispatch({ type: GET_EVENTS_ERROR, payload: { eventData: [] } });
+    }
+  };
+
   useEffect(() => {
     getCurrentUser();
   }, []);
@@ -202,6 +243,8 @@ export const AppProvider = ({ children }) => {
         keepScanning,
         UserEntry,
         getCategories,
+        registerQR,
+        getEventData,
       }}
     >
       {children}

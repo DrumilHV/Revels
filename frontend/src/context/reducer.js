@@ -6,11 +6,17 @@ import {
   GET_CATEGORIES_SUCCESS,
   GET_CURRENT_USER_BEGIN,
   GET_CURRENT_USER_SUCCESS,
+  GET_EVENTS_BEGIN,
+  GET_EVENTS_ERROR,
+  GET_EVENTS_SUCCESS,
   KEEP_SCANNING,
   LOGIN_USER_BEGIN,
   LOGIN_USER_ERROR,
   LOGIN_USER_SUCCESS,
   LOGOUT_USER,
+  REGISTER_PROSHOW_BEGIN,
+  REGISTER_PROSHOW_ERROR,
+  REGISTER_PROSHOW_SUCCESS,
   USER_ENTRY_BEGIN,
   USER_ENTRY_ERROR,
   USER_ENTRY_SUCCESS,
@@ -127,6 +133,50 @@ const reducer = (state, action) => {
       showAlert: true,
       alertText: action.payload.msg,
       alertType: "danger",
+    };
+  }
+  if (action.type === REGISTER_PROSHOW_BEGIN) {
+    return {
+      ...state,
+      isLoading: true,
+    };
+  }
+  if (action.type === REGISTER_PROSHOW_ERROR) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "danger",
+      alertText: action.payload.msg,
+    };
+  }
+  if (action.type === REGISTER_PROSHOW_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "success",
+      alertText: action.payload.msg,
+    };
+  }
+  if (action.type === GET_EVENTS_BEGIN) {
+    return {
+      ...state,
+      eventDataLoading: true,
+    };
+  }
+  if (action.type === GET_EVENTS_SUCCESS) {
+    return {
+      ...state,
+      eventDataLoading: false,
+      eventData: action.payload.eventData,
+    };
+  }
+  if (action.type === GET_EVENTS_ERROR) {
+    return {
+      ...state,
+      eventDataLoading: false,
+      eventData: action.payload.eventData,
     };
   }
   throw new Error(`no such action:${action.type}`);

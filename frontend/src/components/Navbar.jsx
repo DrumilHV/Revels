@@ -1,92 +1,59 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/revels-logo.png";
+import Hamburger from "hamburger-react";
 
 const Navbar = () => {
-  return (
-    <>
-      {/* Logo */}
-      {/* <div className="flex items-center">
-        <svg
-          className="h-6 w-6 mr-2"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="../assets/revels-logo.png"
-        >
-          <path
-            d="M12 2C6.627 2 2 6.627 2 12s4.627 10 10 10s10-4.627 10-10S17.373 2 12 2z"
-            fill="currentColor"
-          />
-          <path
-            d="M12 7.5H7.5a.75.75 0 01-1.5 0L6 9v7.5a.75.75 0 01-1.5 0v-6a.75.75 0 011.5-.75l4.5-3.75a.75.75 0 011.5 0l4.5 3.75a.75.75 0 011.5.75v6a.75.75 0 01-1.5.75z"
-            fill="currentColor"
-          />
-        </svg>
-      </div> */}
-      <nav className="text-white  flex justify-center items-center h-[30px] font-medium text-xl mt-[42px]">
-        {/* Navigation Links */}
-        <ul className="hidden lg:flex items-center space-x-4">
-          <li>
-            <Link to="/" className="px-3 py-2 rounded-xl hover:bg-gray-700">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className="px-3 py-2 rounded-xl hover:bg-gray-700"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/sponsors"
-              className="px-3 py-2 rounded-xl hover:bg-gray-700"
-            >
-              Sponsors
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/schedule"
-              className="px-3 py-2 rounded-xl hover:bg-gray-700"
-            >
-              Schedule
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/leaderboard"
-              className="px-3 py-2 rounded-xl hover:bg-gray-700"
-            >
-              Leaderboard
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact-us"
-              className="px-3 py-2 rounded-xl hover:bg-gray-700"
-            >
-              Contact Us
-            </Link>
-          </li>
-        </ul>
+  const Links = [
+    { name: "Home", link: "/" },
+    { name: "About", link: "/about" },
+    // { name: "Sponsors", link: "/sponsors" },
+    { name: "Schedule", link: "/schedule" },
+    // { name: "Leaderboard", link: "/leaderboard" },
+    { name: "Events", link: "/event" },
+    // { name: "Proshow", link: "/proshow" },
+    { name: "Contact Us", link: "/contact-us" },
+  ];
+  let [open, setOpen] = useState(false);
 
-        {/* Mobile Menu Button */}
-        <button className="block lg:hidden focus:outline-none">
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            className="w-6 h-6 text-white"
-          >
-            <path
-              fillRule="evenodd"
-              d="M4 6h16v2H4V6zm16 8h-4v2h4V14zm-8 4h-4v2h4V18z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
-      </nav>
-    </>
+  return (
+    <div className="shadow-md w-full fixed top-0 left-0 backdrop-blur-lg">
+      <div className="md:flex items-center justify-between md:px-10 px-7">
+        <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
+          <img
+            className={`h-[92px] w-[92px] justify-self-center max-[990px]:right-[1%] right-[15%] ${
+              open ? "opacity-0" : "opacity-100"
+            } transition-all duration-300 ease-in 
+            `}
+            src={Logo}
+            alt="Revels 24"
+          />
+        </div>
+        <div className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7 text-[#FFFFFF]">
+          <Hamburger toggled={open} toggle={setOpen} size={26} />
+        </div>
+        <ul
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static lg:bg-transparent md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-300 ease-in ${
+            open ? "top-0 bg-[#0F1E31] z-10" : "top-[-490px]"
+          }`}
+        >
+          {Links.map((link, index) => (
+            <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
+              <Link
+                to={link.link}
+                className={`text-[#FFFFFF] lg:text-[27px] md:text-[22px] hover:border-b-2 hover:border-white duration-500 ${
+                  window.location.pathname === link.link
+                    ? "border-b-2 border-white"
+                    : ""
+                }`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

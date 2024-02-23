@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FiUpload } from "react-icons/fi";
 import QrScanner from "qr-scanner";
 import "./Scanner.css";
@@ -10,11 +10,13 @@ const Scanner = () => {
   const videoRef = useRef(null);
   const qrScannerRef = useRef(null);
   const { UserEntry, isLoading } = useAppContext();
+  const [isScanned, setIsScanned] = useState(false);
 
   useEffect(() => {
     qrScannerRef.current = new QrScanner(videoRef.current, (result) => {
       console.log("decoded qr code:", result);
-      if (!isLoading) {
+      if (!isLoading && !isScanned) {
+        setIsScanned(true);
         UserEntry(result);
         stopScan();
       }
@@ -22,9 +24,10 @@ const Scanner = () => {
     qrScannerRef.current.start();
 
     return () => stopScan();
-  }, [UserEntry]);
+  }, [UserEntry, isLoading, isScanned]);
 
   const startScan = () => {
+    setIsScanned(false); // Reset the scanned state
     qrScannerRef.current.start();
   };
 
@@ -42,7 +45,10 @@ const Scanner = () => {
         QrScanner.scanImage(image)
           .then((result) => {
             console.log("decoded qr code from image:", result);
-            UserEntry(result);
+            if (!isScanned) {
+              setIsScanned(true);
+              UserEntry(result);
+            }
           })
           .catch((error) => {
             console.error("error scanning image:", error);
