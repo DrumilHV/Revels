@@ -6,6 +6,25 @@
     <link href="./src/index.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Revels 2024</title>
+    <style>
+      df-messenger {
+        --df-messenger-bot-message: #de9256;
+        --df-messenger-button-titlebar-color: #fbf3eb;
+        --df-messenger-button-titlebar-font-color: #2c2f42;
+        --df-messenger-chat-background-color: #fafafa;
+        --df-messenger-font-color: #fbf3eb;
+        --df-messenger-send-icon: #2c2f42;
+        --df-messenger-user-message: #6b78a5;
+      }
+    </style>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Revels Bot"
+      agent-id="29fbaada-866c-462d-ae3c-7e0b1ae8a308"
+      language-code="en"
+      chat-icon="./revels-logo.png"
+    ></df-messenger>
   </head>
   <body>
     <div id="root"></div>
