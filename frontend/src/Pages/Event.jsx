@@ -44,12 +44,13 @@ export default function Event() {
     <>
       <Navbar />
       <div
-        className={`min-h-screen flex flex-col md:items-center px-2 gap-y-8  overflow-hidden overscroll-y-hidden pt-16 pb-28 md:pb-0 bg-bottom`}
-        style={{
-          backgroundImage: `url(${mountainImage})`,
-          backgroundSize: "cover",
-        }}
+        className={`flex flex-col md:items-center px-2 gap-y-8  overflow-hidden overscroll-y-hidden pt-16 pb-28 md:pb-0 bg-bottom`}
       >
+        <img
+          src={mountainImage}
+          alt="Mountains"
+          className="fixed bottom-0 z-[-1] w-[100%] hidden md:block"
+        />
         <div className="flex flex-col sm:flex-row gap-y-4 gap-x-10 md:w-4/5 sm:justify-center py-4 px-6 rounded-lg bigCard">
           <select
             value={categoryType}

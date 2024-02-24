@@ -63,13 +63,12 @@ function Home() {
     <>
       <Navbar />
       <Footer />
-      <div
-        className="min-h-screen flex flex-col gap-y-16 items-center overflow-hidden overscroll-y-hidden pt-8 pb-20 md:pb-0 md:bg-hero-background bg-bottom"
-        style={{
-          backgroundImage: `url(${mountainImage})`,
-          backgroundSize: "cover",
-        }}
-      >
+      <div className="relative flex flex-col items-center overflow-hidden overscroll-y-hidden pt-8 pb-20 md:pb-0">
+        <img
+          src={mountainImage}
+          alt="Mountains"
+          className="fixed bottom-0 z-[-1] w-[100%] hidden md:block"
+        />
         <div className="text-[#FFFFFF] font-extrabold font-mono flex md:flex-row">
           <div className="flex flex-col md:flex-row gap-8">
             <CounterUnit label="days">

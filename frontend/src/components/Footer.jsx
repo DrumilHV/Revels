@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 px-6 text-center">
+    <div className="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-4 px-6 text-center z-[2]">
       <p className="text-sm">
         Have any questions or feedback? <br className="lg:hidden" /> Please fill
         out{" "}

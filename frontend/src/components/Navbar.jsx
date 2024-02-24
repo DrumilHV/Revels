@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../assets/revels-logo.png";
 import Hamburger from "hamburger-react";
 
@@ -12,6 +12,7 @@ const Navbar = () => {
     { name: "Contact Us", link: "/contact-us" },
   ];
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <div
@@ -35,14 +36,32 @@ const Navbar = () => {
         >
           {Links.map((linked, index) => (
             <li key={index}>
-              <Link
-                to={linked.link}
-                className="block py-2 px-4 hover:underline duration-500 lg:text-[27px] md:text-[22px]"
-              >
-                {linked.name}
-              </Link>
+              <div className="flex justify-center">
+                <Link
+                  to={linked.link}
+                  className={`px-2 my-2 duration-500 hover:border-b-2 hover:border-white lg:text-[27px] md:text-[22px] ${
+                    location.pathname === linked.link
+                      ? "border-b-2 border-white"
+                      : ""
+                  }`}
+                >
+                  {linked.name}
+                </Link>
+              </div>
             </li>
           ))}
+          <li className="md:hidden">
+            <div className="flex justify-center">
+              <a
+                href="https://register.revelsmit.in/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-[rgba(235, 164, 112, 1)] text-white rounded-md duration-500 bg-[#D09369] hover:bg-[#9C493F] lg:text-[18px] md:text-[16px]"
+              >
+                Login
+              </a>
+            </div>
+          </li>
         </ul>
       </div>
     </div>

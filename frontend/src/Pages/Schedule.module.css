@@ -4,8 +4,9 @@
   width: 80%;
   margin: 20px auto;
   margin-bottom: 20px;
-  /* overflow: auto; */
+  overflow: hidden;
 }
+
 /* Hide the scrollbar */
 .scheduleContainer::-webkit-scrollbar {
   width: 0em;
@@ -14,16 +15,13 @@
 .scheduleContainer::-webkit-scrollbar-thumb {
   background-color: #faebd7; /* Adjust the color to match your container background */
 }
+
 .dayContainer {
   background-color: #ffffff4d;
   border-radius: 16px;
   border: 3px solid white;
-  margin-bottom: 20px; /* Adjust as needed for the space between days */
-}
-@media screen and (max-width: 768px) {
-  .dayContainer {
-    overflow-x: scroll;
-  }
+  margin-bottom: 20px;
+  overflow-x: auto;
 }
 
 .scheduleHeader {
@@ -34,12 +32,15 @@
   background-color: #ffffff4d;
 }
 
+.scheduleTableContainer {
+  overflow-x: auto;
+}
+
 .scheduleTable {
   width: 100%;
   margin: 0;
   border-collapse: collapse;
   background-color: transparent;
-  overflow-x: auto;
 }
 
 .scheduleTable th,
@@ -59,6 +60,6 @@
   border-right: 3px solid white;
 }
 
-td .rowDivider {
-  border-bottom: 3px solid white;
+.rowDivider {
+  border-bottom: 3px solid white;
 }
