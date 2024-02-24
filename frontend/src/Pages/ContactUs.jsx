@@ -69,9 +69,15 @@ const devTeamData = [
   },
   {
     img: Dhrumil,
-    name: "Dhrumil Haresh Ved",
+    name: "Drumil Haresh Ved",
     pos: "Web Developer",
   },
+  {
+    img: Yashvardhan,
+    name: "Yashvardhan Vijay",
+    pos: "Web Developer",
+  },
+
   {
     img: Jay,
     name: "Jay Patel",
@@ -95,11 +101,6 @@ const devTeamData = [
   {
     img: Siddhant,
     name: "Siddhant Khurana",
-    pos: "Web Developer",
-  },
-  {
-    img: Yashvardhan,
-    name: "Yashvardhan Vijay",
     pos: "Web Developer",
   },
   {
@@ -174,9 +175,9 @@ const ContactUs = () => {
     <>
       <Navbar />
       <Footer />
-      <div className="min-h-screen box-border mb-8 p-0 flex flex-col items-center mt-[50px] lg:m-[90px] m-[0px]">
+      <div className="min-h-screen box-border mb-8 p-0 flex flex-col items-center mt-[10px] lg:m-[10px] m-[0px] sm:mt-0 md:mt-0">
         <div className="">
-          <h1 className="font-bold mb-2 text-[#fff] max-lg:mt-[45px] text-2xl md:text-3xl lg:text-4xl m-[30px]">
+          <h1 className="font-bold mb-2 text-[#fff] max-lg:mt-[45px] text-2xl md:text-3xl lg:text-4xl m-[30px] sm:mt-0 md:mt-0">
             Conveners
           </h1>
         </div>
@@ -195,7 +196,7 @@ const ContactUs = () => {
         </div>
 
         <div className="mt-5 w-full items-center justify-center flex flex-col">
-          <h1 className="font-bold text-center text-[#fff] text-2xl md:text-3xl lg:text-4xl">
+          <h1 className="font-bold text-center text-[#fff] text-2xl md:text-3xl lg:text-4xl mb-5">
             Dev Team
           </h1>
           <TechSecCard

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaHouseLaptop } from "react-icons/fa6";
 import { MdOutlinePlace } from "react-icons/md";
 import { MdGroups2 } from "react-icons/md";
@@ -6,6 +6,8 @@ import { IoPersonSharp } from "react-icons/io5";
 import Navbar from "./../components/Navbar";
 import { useAppContext } from "../context/appContext";
 import LoadingPage from "./Loading";
+import mountainImage from "../assets/mountains.png";
+import { PropTypes } from "prop-types";
 
 export default function Event() {
   const [categoryType, setCategoryType] = useState("");
@@ -42,7 +44,11 @@ export default function Event() {
     <>
       <Navbar />
       <div
-        className={`min-h-screen flex flex-col md:items-center px-2 gap-y-8  overflow-hidden overscroll-y-hidden pt-32 pb-28 md:pb-0 md:bg-hero-background bg-bottom`}
+        className={`min-h-screen flex flex-col md:items-center px-2 gap-y-8  overflow-hidden overscroll-y-hidden pt-16 pb-28 md:pb-0 bg-bottom`}
+        style={{
+          backgroundImage: `url(${mountainImage})`,
+          backgroundSize: "cover",
+        }}
       >
         <div className="flex flex-col sm:flex-row gap-y-4 gap-x-10 md:w-4/5 sm:justify-center py-4 px-6 rounded-lg bigCard">
           <select
@@ -83,12 +89,6 @@ export default function Event() {
           {events?.map((event) => (
             <EventCard key={event._id} eventData={event} />
           ))}
-          {/* {data
-            .find((item) => item.category_type === categoryType)
-            ?.categories?.find((obj) => obj.category_name === categoryName)
-            .events?.map((event) => (
-              <EventCard key={event._id} eventData={event} />
-            ))} */}
         </div>
       </div>
     </>
@@ -111,9 +111,9 @@ const EventCard = ({ eventData }) => {
   let teamSizeLabel = "";
   if (team_type) {
     if (team_size_max) {
-      teamSizeLabel = `(${team_size_min} - ${team_size_max})`;
+      teamSizeLabel = `${team_size_min} - ${team_size_max}`;
     } else {
-      teamSizeLabel = `(${team_size_min} or more)`;
+      teamSizeLabel = `${team_size_min} or more`;
     }
   }
 
@@ -169,4 +169,16 @@ const EventCard = ({ eventData }) => {
       </div>
     </>
   );
+};
+
+EventCard.propTypes = {
+  eventData: PropTypes.shape({
+    event_name: PropTypes.string.isRequired,
+    event_type: PropTypes.string.isRequired,
+    team_type: PropTypes.string.isRequired,
+    team_size_min: PropTypes.number.isRequired,
+    team_size_max: PropTypes.number.isRequired,
+    event_amount: PropTypes.number.isRequired,
+    event_desc: PropTypes.string.isRequired,
+  }).isRequired,
 };

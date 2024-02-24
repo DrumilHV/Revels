@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import mountainImage from "../assets/mountains.png";
 
 function CounterUnit({ children, label }) {
   return (
@@ -20,7 +21,7 @@ function Home() {
   });
 
   // Specify the target date and time here
-  const targetDate = new Date("2024-03-20T00:00:00");
+  const targetDate = new Date("2024-03-06T00:00:00");
 
   useEffect(() => {
     const now = new Date();
@@ -62,7 +63,13 @@ function Home() {
     <>
       <Navbar />
       <Footer />
-      <div className="min-h-screen flex flex-col gap-y-16 items-center overflow-hidden overscroll-y-hidden pt-28 pb-28 md:pb-0 bg-none md:bg-hero-background bg-bottom">
+      <div
+        className="min-h-screen flex flex-col gap-y-16 items-center overflow-hidden overscroll-y-hidden pt-8 pb-20 md:pb-0 md:bg-hero-background bg-bottom"
+        style={{
+          backgroundImage: `url(${mountainImage})`,
+          backgroundSize: "cover",
+        }}
+      >
         <div className="text-[#FFFFFF] font-extrabold font-mono flex md:flex-row">
           <div className="flex flex-col md:flex-row gap-8">
             <CounterUnit label="days">
@@ -91,11 +98,17 @@ function Home() {
         {/* Centered about section */}
         <div className="text-[20px] px-8 max-w-[1000px] text-[#FFFFFF] font-medium text-justify">
           <p>
-            {/* Your about section content here */}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore
-            nisi aliquam voluptas a consequuntur! Quibusdam, reprehenderit est
-            rem molestiae vel delectus autem soluta eligendi perferendis
-            recusandae, nemo, molestias rerum natus.
+            Founded in 1982, Revels is the annual cultural festival of Manipal
+            Institute of Technology, Manipal, heralded by the onset of spring.
+            Conducted over a period of four days, including a much-celebrated
+            sports tournament called Revels Cup, the fest is a junction of a
+            plethora of events. Whether it be Literature, Music, Dance,
+            Dramatics, Quiz, Debate, Fashion, Art, Comedy, and Professional
+            concerts, the fest boasts of throngs of 'thorns to competition'.
+            Each year thousands of endearing delegates flood the pristine
+            campuses of Manipal for this iconic festival, with the various
+            sports events and cultural workshops making this a festival you do
+            not want to miss.
           </p>
         </div>
         {/* Buttons */}
@@ -104,17 +117,15 @@ function Home() {
             href="https://register.revelsmit.in/login"
             className="text-xl text-[#FFFFFF]"
           >
-            {" "}
-            <button className="border-[2px] px-8 py-2 text-lg text-[#FFFFFF] rounded-lg">
+            <button className="border-[2px] px-8 py-2 text-lg text-[#FFFFFF] rounded-lg hover:opacity-80 transition-opacity duration-300">
               LOGIN
             </button>
           </a>
-          {/* put url for the drive link */}
           <a
             href="https://drive.google.com/drive/folders/13kOLV2IEFrOTj02UdVde8FpznAHsklEI"
             target="_blank"
           >
-            <button className="border-[2px] px-10 py-2 text-lg text-[#FFFFFF] rounded-lg flex">
+            <button className="border-[2px] px-10 py-2 text-lg text-[#FFFFFF] rounded-lg flex hover:opacity-80 transition-opacity duration-300">
               VIEW RULEBOOK
             </button>
           </a>

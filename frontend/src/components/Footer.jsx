@@ -6,7 +6,7 @@ const Footer = () => {
         out{" "}
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSf5-SPjnXysx0GvLzx0TTITwVmURtlLwCGvv6xwnp5uvRyjPg/viewform"
-          className="text-blue-400 hover:text-blue-300"
+          className="text-blue-400 hover:text-blue-300 z-[100]"
           target="_blank"
           rel="noopener noreferrer"
         >

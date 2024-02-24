@@ -7,47 +7,39 @@ const Navbar = () => {
   const Links = [
     { name: "Home", link: "/" },
     { name: "About", link: "/about" },
-    // { name: "Sponsors", link: "/sponsors" },
     { name: "Schedule", link: "/schedule" },
-    // { name: "Leaderboard", link: "/leaderboard" },
     { name: "Events", link: "/event" },
-    // { name: "Proshow", link: "/proshow" },
     { name: "Contact Us", link: "/contact-us" },
   ];
-  let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <div className="shadow-md w-full fixed top-0 left-0 backdrop-blur-lg">
-      <div className="md:flex items-center justify-between md:px-10 px-7">
-        <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-          <img
-            className={`h-[92px] w-[92px] justify-self-center max-[990px]:right-[1%] right-[15%] ${
-              open ? "opacity-0" : "opacity-100"
-            } transition-all duration-300 ease-in 
-            `}
-            src={Logo}
-            alt="Revels 24"
-          />
-        </div>
-        <div className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7 text-[#FFFFFF]">
-          <Hamburger toggled={open} toggle={setOpen} size={26} />
+    <div
+      className={`sticky top-0 z-50 shadow-md backdrop-blur-lg ${
+        open ? "bg-[#0F1E31]" : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-4 md:px-0 py-4 md:flex md:items-center md:justify-between">
+        <div className="flex items-center justify-between">
+          <Link to="/" className="flex items-center">
+            <img src={Logo} alt="Revels 24" className="h-[52px] md:h-16 mr-2" />
+          </Link>
+          <div className="absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7 text-[#FFFFFF]">
+            <Hamburger toggled={open} toggle={setOpen} size={24} />
+          </div>
         </div>
         <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static lg:bg-transparent md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-300 ease-in ${
-            open ? "top-0 bg-[#0F1E31] z-10" : "top-[-490px]"
+          className={`md:flex md:space-x-6 text-white mt-4 md:mt-0 ${
+            open ? "block" : "hidden md:block"
           }`}
         >
-          {Links.map((link, index) => (
-            <li key={index} className="md:ml-8 md:my-0 my-7 font-semibold">
+          {Links.map((linked, index) => (
+            <li key={index}>
               <Link
-                to={link.link}
-                className={`text-[#FFFFFF] lg:text-[27px] md:text-[22px] hover:border-b-2 hover:border-white duration-500 ${
-                  window.location.pathname === link.link
-                    ? "border-b-2 border-white"
-                    : ""
-                }`}
+                to={linked.link}
+                className="block py-2 px-4 hover:underline duration-500 lg:text-[27px] md:text-[22px]"
               >
-                {link.name}
+                {linked.name}
               </Link>
             </li>
           ))}
