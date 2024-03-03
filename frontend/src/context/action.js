@@ -26,3 +26,16 @@ export const REGISTER_PROSHOW_ERROR = "REGISTER_PROSHOW_ERROR";
 export const GET_EVENTS_BEGIN = "GET_EVENTS_BEGIN";
 export const GET_EVENTS_ERROR = "GET_EVENTS_ERROR";
 export const GET_EVENTS_SUCCESS = "GET_EVENTS_SUCCESS";
+
+export const SET_TEAM_NUMBER = "SET_TEAM_NUMBER";
+export const SET_EVENT_ID = "SET_EVENT_ID";
+
+// export const setTeamNumber = (teamNumber) => ({
+//   type: SET_TEAM_NUMBER,
+//   payload: teamNumber,
+// });
+
+// export const setEventID = (eventID) => ({
+//   type: SET_EVENT_ID,
+//   payload: eventID,
+// });

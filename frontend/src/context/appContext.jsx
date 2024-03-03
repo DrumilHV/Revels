@@ -25,6 +25,8 @@ import {
   USER_ENTRY_BEGIN,
   USER_ENTRY_ERROR,
   USER_ENTRY_SUCCESS,
+  SET_TEAM_NUMBER,
+  SET_EVENT_ID,
 } from "./action";
 
 export const initialState = {
@@ -40,6 +42,8 @@ export const initialState = {
   categoryLoading: false,
   eventData: null,
   eventDataLoading: false,
+  teamNumber: null,
+  eventID: null,
 };
 
 const baseUrl = import.meta.env.VITE_SERVER_URL;
@@ -229,6 +233,14 @@ export const AppProvider = ({ children }) => {
     }
   };
 
+  const setTeamNumber = (teamNumber) => {
+    dispatch({ type: SET_TEAM_NUMBER, payload: { teamNumber } });
+  };
+
+  const setEventID = (eventID) => {
+    dispatch({ type: SET_EVENT_ID, payload: { eventID } });
+  };
+
   useEffect(() => {
     getCurrentUser();
   }, []);
@@ -245,6 +257,8 @@ export const AppProvider = ({ children }) => {
         getCategories,
         registerQR,
         getEventData,
+        setTeamNumber,
+        setEventID,
       }}
     >
       {children}

@@ -20,6 +20,8 @@ import {
   USER_ENTRY_BEGIN,
   USER_ENTRY_ERROR,
   USER_ENTRY_SUCCESS,
+  SET_TEAM_NUMBER,
+  SET_EVENT_ID,
 } from "./action";
 
 import { initialState } from "./appContext";
@@ -177,6 +179,18 @@ const reducer = (state, action) => {
       ...state,
       eventDataLoading: false,
       eventData: action.payload.eventData,
+    };
+  }
+  if (action.type === SET_TEAM_NUMBER) {
+    return {
+      ...state,
+      teamNumber: action.payload,
+    };
+  }
+  if (action.type === SET_EVENT_ID) {
+    return {
+      ...state,
+      eventID: action.payload,
     };
   }
   throw new Error(`no such action:${action.type}`);

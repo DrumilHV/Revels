@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import CCLogin from "./Pages/CCLogin";
 import Alert from "./components/Alert";
 import { CCProtect } from "./Pages/CCProtect";
@@ -14,8 +14,15 @@ import Schedule from "./Pages/Schedule";
 import Leaderboard from "./Pages/Leaderboard";
 import ContactUs from "./Pages/ContactUs";
 import ProshowFinal from "./Pages/ProshowFinal";
+import JudgeScore from "./Pages/JudgeScore";
+import JudgeLogin from "./Pages/JudgeLogin";
+import JudgeEvent from "./Pages/JudgeEvent";
+import JudgeSelectTeam from "./Pages/JudgeSelectTeam";
 
 const App = () => {
+  const judgeId = localStorage.getItem("judge_id");
+  const token = localStorage.getItem("token");
+
   const aboutData = [
     {
       eventname: "Hackathon 2024",
@@ -116,6 +123,19 @@ const App = () => {
             </CCProtect>
           }
         />
+
+        <Route path="/judge/login" element={<JudgeLogin />} />
+
+        {judgeId && token ? (
+          <>
+            <Route path="/judge/score" element={<JudgeScore />} />
+            <Route path="/judge/event" element={<JudgeEvent />} />
+            <Route path="/judge/event/:id" element={<JudgeSelectTeam />} />
+          </>
+        ) : (
+          <Route path="*" element={<Navigate to="/judge/login" />} />
+        )}
+
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>

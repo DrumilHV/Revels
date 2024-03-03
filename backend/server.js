@@ -18,6 +18,13 @@ import connectDB from "./db/connect.js";
 import committeeRouter from "./Routes/CommitteeRoutes.js";
 import qRrouter from "./Routes/QRRoutes.js";
 import eventRouter from "./Routes/EventRoutes.js";
+// judge - routes
+import categoryRoutes from "./Routes/categoryRoutes.js";
+import EventRoutes from "./Routes/EventRoutes.js";
+import criteriaRoutes from "./Routes/criteriaRoutes.js";
+import judgeRoutes from "./Routes/judgeRoutes.js";
+import scoreRoutes from "./Routes/scoreRoutes.js";
+import authRoutes from "./Routes/authRoutes.js";
 
 //middleware
 import notFoundMiddleware from "./middleware/not-found.js";
@@ -65,7 +72,9 @@ const corsOptions = {
   methods: "GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE",
 };
 
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // - - - - - - kaam karna hain
+// judge - use
+app.use(express.urlencoded({ extended: true }));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -80,6 +89,14 @@ app.get("/", async (req, res) => {
 app.use("/api/cc", committeeRouter);
 app.use("/api/QR", qRrouter);
 app.use("/api/events", eventRouter);
+
+// judge - Routes
+app.use("/category", categoryRoutes);
+app.use("/event", EventRoutes);
+app.use("/criteria", criteriaRoutes);
+app.use("/judge", judgeRoutes);
+app.use("/scores", scoreRoutes);
+app.use("/auth", authRoutes);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
