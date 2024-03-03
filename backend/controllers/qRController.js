@@ -10,6 +10,7 @@ import Event from "../models/Event.js";
 import fetchData from "../utils/fetchData.js";
 import Proshow from "../models/Proshow.js";
 import CryptoJS from "crypto-js";
+import moment from "moment-timezone";
 
 const teamUrl = "https://api.revelsmit.in/api/v1/admin/event/team-details/";
 const individualUrl =
@@ -146,8 +147,32 @@ export const eventEntry = async (req, res) => {
   }
 };
 
+const registrationTimings = {
+  day1: {
+    startTime: "2024-03-02 10:00:00",
+    endTime: "2024-03-06 12:00:00",
+    maxLimit: 3000,
+  },
+  day2: {
+    startTime: "2024-03-04 10:00:00",
+    endTime: "2024-03-07 12:00:00",
+    maxLimit: 3000,
+  },
+  day3: {
+    startTime: "2024-03-04 10:00:00",
+    endTime: "2024-03-09 12:00:00",
+    maxLimit: 20000,
+  },
+  test: {
+    startTime: "2024-03-02 10:00:00",
+    endTime: "2024-03-10 12:00:00",
+    maxLimit: 30000,
+  },
+};
+
 export const proshowReg = async (req, res) => {
   const { QRData, day } = req.body;
+
   if (!QRData || !day) {
     throw new BadRequestError("Invalid Request");
   }
@@ -157,6 +182,28 @@ export const proshowReg = async (req, res) => {
   if (ind === -1) {
     throw new BadRequestError("Invalid Day, gadbad mat karo");
   }
+  const currentTime = moment().tz("Asia/Kolkata");
+  const startTime = moment(
+    registrationTimings[day].startTime,
+    "YYYY-MM-DD HH:mm:ss"
+  ).tz("Asia/Kolkata");
+  const endTime = moment(
+    registrationTimings[day].endTime,
+    "YYYY-MM-DD HH:mm:ss"
+  ).tz("Asia/Kolkata");
+  if (currentTime.isBefore(startTime) || currentTime.isAfter(endTime)) {
+    throw new BadRequestError("Registeration not yet open");
+  }
+  if (currentTime.isAfter(endTime)) {
+    throw new BadRequestError("Registeration closed");
+  }
+
+  const maxLimit = registrationTimings[day].maxLimit;
+  const registrationCount = await Proshow.countDocuments({ [day]: true });
+  if (registrationCount >= maxLimit) {
+    throw new BadRequestError("Maximum registrations reached");
+  }
+
   const ProshowExists = await Proshow.findOne({ delegate_id: delegate });
   if (ProshowExists) {
     if (ProshowExists[day] === true) {
@@ -165,7 +212,7 @@ export const proshowReg = async (req, res) => {
     ProshowExists[day] = true;
     await ProshowExists.save();
     res.status(StatusCodes.OK).json({
-      msg: `Succesfully Registered ${ProshowExists.full_name} for ${day}`,
+      msg: `Successfully Registered ${ProshowExists.user_name} for ${day}`,
     });
   } else {
     const newProshow = await findProshowUser(delegate);
@@ -176,7 +223,7 @@ export const proshowReg = async (req, res) => {
       user[day] = true;
       await Proshow.create(user);
       res.status(StatusCodes.OK).json({
-        msg: `Succesfully Registered ${ProshowExists.full_name} for ${day}`,
+        msg: `Successfully Registered ${Proshow.user_name} for ${day}`,
       });
     }
   }

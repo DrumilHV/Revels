@@ -13,8 +13,7 @@ import Sponsors from "./Pages/Sponsors";
 import Schedule from "./Pages/Schedule";
 import Leaderboard from "./Pages/Leaderboard";
 import ContactUs from "./Pages/ContactUs";
-import Proshow from "../../backend/models/Proshow";
-import ProshowFinal from "./Pages/Proshow";
+import ProshowFinal from "./Pages/ProshowFinal";
 
 const App = () => {
   const aboutData = [

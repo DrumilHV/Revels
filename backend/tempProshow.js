@@ -15,6 +15,7 @@ async function deleteAllProshow() {
   }
 }
 async function migrateDatabase() {
+  console.log("test");
   await deleteAllProshow();
 
   let page = 1;
@@ -30,6 +31,7 @@ async function migrateDatabase() {
       return doc;
     });
     await Proshow.insertMany(proshows);
+    console.log(proshows);
     if (!data.hasNextPage) break;
     else page++;
   } while (true);

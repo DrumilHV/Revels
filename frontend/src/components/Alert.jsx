@@ -23,7 +23,7 @@ const Alert = () => {
     <div
       className={`${
         showAlert ? "block" : "hidden"
-      } fixed bottom-4 right-4 p-4 rounded-lg shadow-lg bg-dark ${getBorderColor()} ml-4 border-l-4 z-50`}
+      } fixed bottom-4 left-4 p-4 rounded-lg shadow-lg ${getBorderColor()} ml-4 border-l-4 z-[100] bg-gray-800 bg-opacity-100`}
     >
       <div className="flex items-center">
         <div className="text-2xl mr-4">{getIcon()}</div>
