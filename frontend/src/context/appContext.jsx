@@ -25,7 +25,7 @@ import {
   USER_ENTRY_BEGIN,
   USER_ENTRY_ERROR,
   USER_ENTRY_SUCCESS,
-  SET_TEAM_NUMBER,
+  SET_TEAM_ID,
   SET_EVENT_ID,
 } from "./action";
 
@@ -42,7 +42,7 @@ export const initialState = {
   categoryLoading: false,
   eventData: null,
   eventDataLoading: false,
-  teamNumber: null,
+  teamID: null,
   eventID: null,
 };
 
@@ -233,12 +233,18 @@ export const AppProvider = ({ children }) => {
     }
   };
 
-  const setTeamNumber = (teamNumber) => {
-    dispatch({ type: SET_TEAM_NUMBER, payload: { teamNumber } });
+  const setTeamID = (teamID) => {
+    dispatch({
+      type: SET_TEAM_ID,
+      payload: { teamID },
+    });
   };
 
   const setEventID = (eventID) => {
-    dispatch({ type: SET_EVENT_ID, payload: { eventID } });
+    dispatch({
+      type: SET_EVENT_ID,
+      payload: { eventID },
+    });
   };
 
   useEffect(() => {
@@ -257,7 +263,7 @@ export const AppProvider = ({ children }) => {
         getCategories,
         registerQR,
         getEventData,
-        setTeamNumber,
+        setTeamID,
         setEventID,
       }}
     >

@@ -57,7 +57,7 @@ const EventCard = ({ eve }) => {
             className="bg-[#000000] p-[4px] px-[8px] rounded cursor-pointer"
             onClick={() => handleClick(eve._id)}
           >
-            Go to Score
+            Go to Select Team
           </span>
         </div>
 

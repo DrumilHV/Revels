@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import CCLogin from "./Pages/CCLogin";
 import Alert from "./components/Alert";
 import { CCProtect } from "./Pages/CCProtect";
+import CCPage from "./Pages/CCPage";
 import CCLogout from "./Pages/CCLogout";
 import Error from "./Pages/NotFound";
 import Scanning from "./Pages/Scanning";
@@ -115,6 +116,14 @@ const App = () => {
           }
         />
         <Route path="/cc" element={<CCLogin />} />
+        <Route
+          path="/cc/addContent"
+          element={
+            <CCProtect>
+              <CCPage />
+            </CCProtect>
+          }
+        />
         <Route
           path="/cc/logout"
           element={

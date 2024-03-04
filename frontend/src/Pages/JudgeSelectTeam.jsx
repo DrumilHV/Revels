@@ -28,14 +28,13 @@ const data = [
 
 function Results() {
   // Initialize dispatch
-  // const { dispatch } = useAppContext();
-  const { teamId } = useAppContext();
+  const { setTeamID, setEventID } = useAppContext(); // Import setTeamNumber and setEventID from context
 
   const navigate = useNavigate();
 
   const { id } = useParams();
-  const eventId = id;
-  console.log("Event ID:", eventId);
+  const eventID = id;
+  console.log("Event ID:", eventID);
 
   const [tableData, setTableData] = useState([]);
 
@@ -46,7 +45,7 @@ function Results() {
           "http://localhost:17392/event/getTeams",
           {
             params: {
-              eventId: eventId,
+              eventId: eventID,
             },
           }
         );
@@ -59,22 +58,30 @@ function Results() {
     fetchEvents();
   }, []);
 
-  function handleCellClick(teamId) {
+  function handleCellClick(teamID) {
     // Update the global state
-    // Dispatch actions to update Redux store with team number and round number
-    // dispatch({ type: "SET_TEAM_NUMBER", payload: teamId });
-    // dispatch({ type: "SET_EVENT_ID", payload: eventId });
+    setTeamID(teamID); // Set the team number
+    setEventID(eventID); // Set the event ID
 
     navigate("/judge/score");
     // window.location.href("/score");
     // Show the score in an alert
-    alert(`Team ID: ${teamId}, Event ID: ${eventId}`);
+    alert(`Team ID: ${teamID}, Event ID: ${eventID}`);
   }
+
+  const handleBackToEvents = () => {
+    navigate("/judge/event");
+  };
+
+  const logout = () => {
+    localStorage.clear();
+    navigate("/judge/login");
+  };
 
   return (
     <div className="w-screen h-screen p-8 rounded shadow-md bg-gray-800">
       <h1 className="text-2xl mb-4 font-bold text-white">
-        Event ID: {eventId}
+        Event ID: {eventID}
       </h1>
       <h1 className="text-2xl mb-4 font-bold text-white">Select Team ID</h1>
       <table className="w-full">
@@ -106,6 +113,24 @@ function Results() {
           ))}
         </tbody>
       </table>
+      <div className="flex">
+        <div className="mt-4 p-4">
+          <button
+            onClick={handleBackToEvents}
+            className="mt-2 p-2 bg-green-500 text-white rounded"
+          >
+            Back to Events page
+          </button>
+        </div>
+        <div className="mt-4 p-4">
+          <button
+            onClick={logout}
+            className="mt-2 p-2 bg-green-500 text-white rounded"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
     </div>
   );
 }

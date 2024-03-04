@@ -3,7 +3,7 @@ import { useAppContext } from "../context/appContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function CriteriaTable({ teamName, eventID }) {
+function CriteriaTable({ teamID, eventID }) {
   const navigate = useNavigate();
   const [criteriaData, SetCriteriaData] = useState([]);
   const [roundNumber, setRoundNumber] = useState(1);
@@ -11,6 +11,11 @@ function CriteriaTable({ teamName, eventID }) {
 
   const handleBackToEvents = () => {
     navigate("/judge/event");
+  };
+
+  const logout = () => {
+    localStorage.clear();
+    navigate("/judge/login");
   };
 
   useEffect(() => {
@@ -38,7 +43,7 @@ function CriteriaTable({ teamName, eventID }) {
       const response = await axios.post("http://localhost:17392/scores/add", {
         eventId: eventID,
         judgeId: "65d1ffd21f0eaa9df724bd36",
-        delegateId: teamName,
+        delegateId: teamID,
         criteriaId: criteriaId,
         score: score,
         roundNumber: roundNumber,
@@ -54,7 +59,7 @@ function CriteriaTable({ teamName, eventID }) {
   return (
     <div className="text-white p-8 rounded shadow-md bg-gray-800 col-span-2">
       <h1 className="text-2xl mb-4 font-bold">Event ID: {eventID}</h1>
-      <h1 className="text-2xl mb-4 font-bold">Team ID: {teamName}</h1>
+      <h1 className="text-2xl mb-4 font-bold">Team ID: {teamID}</h1>
       <br />
       <h1 className="text-2xl mb-4 font-bold">Enter Round Number and Score:</h1>
       <div className="p-4">
@@ -104,13 +109,23 @@ function CriteriaTable({ teamName, eventID }) {
             ))}
           </tbody>
         </table>
-        <div className="mt-4 p-4">
-          <button
-            onClick={handleBackToEvents}
-            className="mt-2 p-2 bg-green-500 text-white rounded"
-          >
-            Back to Events page
-          </button>
+        <div className="flex">
+          <div className="mt-4 p-4">
+            <button
+              onClick={handleBackToEvents}
+              className="mt-2 p-2 bg-green-500 text-white rounded"
+            >
+              Back to Events page
+            </button>
+          </div>
+          <div className="mt-4 p-4">
+            <button
+              onClick={logout}
+              className="mt-2 p-2 bg-green-500 text-white rounded"
+            >
+              Logout
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -119,13 +134,13 @@ function CriteriaTable({ teamName, eventID }) {
 
 function Score() {
   // const { state } = useAppContext();
-  const { teamId, eventID } = useAppContext();
-  console.log("Team Number:", teamId);
+  const { teamID, eventID } = useAppContext();
+  console.log("Team Number:", teamID);
   console.log("Event ID:", eventID);
 
   return (
     <div className="w-screen h-screen bg-gray-800">
-      <CriteriaTable teamName={teamId} eventID={eventID} />
+      <CriteriaTable teamID={teamID} eventID={eventID} />
     </div>
   );
 }

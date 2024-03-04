@@ -1,8 +1,11 @@
 // Judge Event Controller
 import Event from "../models/Event.js";
 import Judge from "../models/Judge.js";
-import Criteria from "../models/User.js";
+import Criteria from "../models/Criteria.js";
 import Score from "../models/Score.js";
+
+import mongoose from "mongoose";
+const { ObjectId } = mongoose.Types;
 
 // Controller for adding a new event
 export const addEvent = async (req, res) => {
@@ -57,6 +60,7 @@ export const addEvent = async (req, res) => {
 export const getTeams = async (req, res) => {
   try {
     const { eventId } = req.query;
+    console.log(eventId);
     const judges = await Judge.find({ eventId }).select("teams");
 
     const teams = judges.reduce((acc, judge) => {
@@ -122,10 +126,10 @@ export const getAllEvents = async (req, res) => {
 export const getCriteriaByEventId = async (req, res) => {
   try {
     const { eventId } = req.query;
-    console.log(eventId);
+    // console.log(eventId);
 
-    const criteria = await Criteria.find({ eventId });
-    console.log(criteria);
+    const criteria = await Criteria.find({ eventId: eventId });
+    // console.log(criteria);
 
     res.status(200).json({ criteria });
   } catch (error) {
