@@ -65,6 +65,7 @@ export const addScores = async (req, res) => {
 
 export const calculateTotalScore = async (req, res) => {
   const { delegateId } = req.body;
+  // console.log("Delegate ID:", delegateId);
 
   try {
     // Use populate to include the Criteria data for each score
@@ -90,13 +91,15 @@ export const calculateTotalScore = async (req, res) => {
       let avgScore = totalScore / roundCriteria.length;
       roundScores.push(avgScore);
     }
+    // console.log("Round Scores:", roundScores);
 
     // Calculate total score
     let totalScore = 0;
     roundScores.forEach((score) => {
       totalScore += score;
     });
-    totalScore = totalScore / roundScores.length;
+    // console.log("Total Score:", totalScore);
+    // totalScore = totalScore / roundScores.length;
 
     res.json({
       roundScores,

@@ -39,11 +39,12 @@ function CriteriaTable({ teamID, eventID }) {
   }, []);
 
   const handleSubmit = async (criteriaId, score, roundNumber) => {
+    var judgeId = localStorage.getItem("judge_id");
     try {
       const response = await axios.post("http://localhost:17392/scores/add", {
         eventId: eventID,
-        judgeId: "65d1ffd21f0eaa9df724bd36",
-        delegateId: teamID,
+        judgeId: judgeId,
+        delegateId: "65d1073abfc0dc84b5397ee1",
         criteriaId: criteriaId,
         score: score,
         roundNumber: roundNumber,
@@ -57,78 +58,95 @@ function CriteriaTable({ teamID, eventID }) {
   };
 
   return (
-    <div className="text-white p-8 rounded shadow-md bg-gray-800 col-span-2">
-      <h1 className="text-2xl mb-4 font-bold">Event ID: {eventID}</h1>
-      <h1 className="text-2xl mb-4 font-bold">Team ID: {teamID}</h1>
-      <br />
-      <h1 className="text-2xl mb-4 font-bold">Enter Round Number and Score:</h1>
-      <div className="p-4">
-        <table className="w-full border border-gray-300 rounded-lg shadow-lg">
-          <thead>
-            <tr>
-              <th className="border-r px-2 py-2 text-center">Criteria</th>
-              <th className="border-r px-2 py-2">Description</th>
-              <th className="border-r px-2 py-2 text-center">Round</th>
-              <th className="border-r px-2 py-2 text-center">Score</th>
-              <th className="border-r px-2 py-2 text-center">Maximum</th>
-              <th className="px-2 py-2 text-center">Submit</th>
-            </tr>
-          </thead>
-          <tbody>
-            {criteriaData.map((criteria) => (
-              <tr key={criteria._id} className="bg-gray-700">
-                <td className="border-r px-2 py-2 text-center">
-                  {criteria.criteria}
-                </td>
-                <td className="border-r px-2 py-2">{criteria.description}</td>
-                <td className="border-r px-2 py-2 text-center">
-                  {criteria.roundNumber}
-                </td>
-                <td className="border-r px-2 py-2 text-center">
-                  <input
-                    type="number"
-                    placeholder="0"
-                    onChange={(e) => setScore(e.target.value)}
-                    className="w-16 p-1 border border-gray-300 rounded text-black"
-                  />
-                </td>
-                <td className="border-r px-2 py-2 text-center">
-                  {criteria.maxScore}
-                </td>
-                <td className="px-2 py-2 text-center">
-                  <button
-                    onClick={() =>
-                      handleSubmit(criteria._id, score, roundNumber)
-                    }
-                    className="mt-2 p-2 bg-blue-500 text-white rounded"
-                  >
-                    Submit
-                  </button>
-                </td>
+    <>
+      <div className="text-black lg:p-8 pt-10 rounded col-span-2">
+        <div className="flex flex-col justify-center text-center gap-y-2 text-[#ffffff]">
+          <h1 className="lg:text-2xl sm:text-lg mb-4 font-bold">
+            Event ID: {eventID}
+          </h1>
+          <h1 className="lg:text-2xl sm:text-lg mb-4 font-bold">
+            Team ID: {teamID}
+          </h1>
+        </div>
+        <h1 className="lg:text-2xl sm:text-lg mt-8 mb-4 ml-4 font-bold text-[#ffffff]">
+          Enter Score for each Criteria:
+        </h1>
+        <div className="p-4">
+          <table className="w-full border rounded-lg shadow-lg">
+            <thead>
+              <tr>
+                <th className="border-r px-2 py-2 text-center shadow-md">
+                  Criteria
+                </th>
+                <th className="border-r px-2 py-2 shadow-md">Description</th>
+                <th className="border-r px-2 py-2 text-center shadow-md">
+                  Round
+                </th>
+                <th className="border-r px-2 py-2 text-center shadow-md">
+                  Score
+                </th>
+                <th className="border-r px-2 py-2 text-center shadow-md">
+                  Maximum
+                </th>
+                <th className="px-2 py-2 text-center shadow-md">Submit</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="flex">
-          <div className="mt-4 p-4">
-            <button
-              onClick={handleBackToEvents}
-              className="mt-2 p-2 bg-green-500 text-white rounded"
-            >
-              Back to Events page
-            </button>
-          </div>
-          <div className="mt-4 p-4">
-            <button
-              onClick={logout}
-              className="mt-2 p-2 bg-green-500 text-white rounded"
-            >
-              Logout
-            </button>
+            </thead>
+            <tbody>
+              {criteriaData.map((criteria) => (
+                <tr key={criteria._id} className="">
+                  <td className="border-r px-2 py-2 text-center">
+                    {criteria.criteria}
+                  </td>
+                  <td className="border-r px-2 py-2">{criteria.description}</td>
+                  <td className="border-r px-2 py-2 text-center">
+                    {criteria.roundNumber}
+                  </td>
+                  <td className="border-r px-2 py-2 text-center">
+                    <input
+                      type="number"
+                      placeholder="0"
+                      onChange={(e) => setScore(e.target.value)}
+                      className="w-16 p-1 border border-gray-300 rounded text-black"
+                    />
+                  </td>
+                  <td className="border-r px-2 py-2 text-center">
+                    {criteria.maxScore}
+                  </td>
+                  <td className="px-2 py-2 text-center">
+                    <button
+                      onClick={() =>
+                        handleSubmit(criteria._id, score, roundNumber)
+                      }
+                      className="mt-2 p-2 bg-blue-500 text-white rounded"
+                    >
+                      Submit
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex flex-col justify-center items-center">
+            <div className="mt-4 p-4">
+              <button
+                onClick={handleBackToEvents}
+                className="mt-2 p-2 bg-black text-white rounded"
+              >
+                Back to Events page
+              </button>
+            </div>
+            <div className="p-4">
+              <button
+                onClick={logout}
+                className="mt-2 p-2 bg-black text-white rounded"
+              >
+                Logout
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -139,7 +157,7 @@ function Score() {
   console.log("Event ID:", eventID);
 
   return (
-    <div className="w-screen h-screen bg-gray-800">
+    <div className="w-screen h-screen">
       <CriteriaTable teamID={teamID} eventID={eventID} />
     </div>
   );

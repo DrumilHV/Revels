@@ -332,7 +332,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center overflow-hidden overscroll-y-hidden py-auto px-6 bg-none md:bg-hero-background bg-bottom bg-red-500">
+    <div className="min-h-screen w-full flex items-center justify-center overflow-hidden overscroll-y-hidden py-auto px-6 bg-none md:bg-hero-background bg-bottom">
       <div className="relative h-[600px] w-[1000px] rounded-3xl flex items-center justify-center border-2 bigCard">
         <div className="absolute left-32 p-8 rounded-3xl w-96 h-[450px] shadow-2xl shadow-black-800 hidden lg:block lg:flex lg:flex-col justify-center items-center gap-1 leftCard">
           <img

@@ -26,7 +26,7 @@ const data = [
   },
 ];
 
-function Results() {
+function SelectTeams() {
   // Initialize dispatch
   const { setTeamID, setEventID } = useAppContext(); // Import setTeamNumber and setEventID from context
 
@@ -50,7 +50,7 @@ function Results() {
           }
         );
         setTableData(data);
-        //console.log("Table Data:", response.data.teams);
+        console.log("Table Data:", response.data.teams);
       } catch (error) {
         console.error("Error fetching events:", error);
       }
@@ -78,29 +78,39 @@ function Results() {
     navigate("/judge/login");
   };
 
+  const gotoResults = () => {
+    navigate(`/judge/result/${eventID}`);
+  };
+
   return (
-    <div className="w-screen h-screen p-8 rounded shadow-md bg-gray-800">
-      <h1 className="text-2xl mb-4 font-bold text-white">
-        Event ID: {eventID}
-      </h1>
-      <h1 className="text-2xl mb-4 font-bold text-white">Select Team ID</h1>
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th className="text-left text-white">Team Name</th>
-            {/* <th className="text-left text-white">Scores</th> */}
-          </tr>
-        </thead>
-        <tbody>
-          {tableData.map((team, index) => (
-            <tr key={index}>
-              <td
-                className="text-white"
-                onClick={handleCellClick.bind(this, team.team_id)}
-              >
-                {team.team_id}
-              </td>
-              {/* <td>
+    <>
+      <div className="w-screen h-screen lg:p-8 md:p-4 sm:p-2 rounded shadow-md">
+        <div className="w-full min-h-full flex flex-col items-center justify-center border-2 rounded-md">
+          <h1 className="lg:text-3xl sm:text-xl mb-8 font-bold text-white border-b-2 p-4">
+            Event ID: {eventID}
+          </h1>
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th className="text-center text-white font-medium text-3xl border-t-2 border-b-2">
+                  <div className="w-inherit h-full m-[0.5rem] p-[0.6rem] lg:text-3xl sm:text-xl">
+                    Select Team ID's
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody className="flex gap-x-10 justify-center items-center m-[30px]">
+              {tableData.map((team, index) => (
+                <tr key={index}>
+                  <td>
+                    <div
+                      className="p-6 border-r-2 border-l-2 hover:opacity-80 hover:underline transition-opacity ease-in text-white text-2xl cursor-pointer"
+                      onClick={handleCellClick.bind(this, team.team_id)}
+                    >
+                      {team.team_id}
+                    </div>
+                  </td>
+                  {/* <td>
                 <ul className="list-disc list-inside text-white">
                   {team.scores.map((score, index) => (
                     <li key={index}>
@@ -109,30 +119,44 @@ function Results() {
                   ))}
                 </ul>
               </td> */}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <div className="flex">
-        <div className="mt-4 p-4">
-          <button
-            onClick={handleBackToEvents}
-            className="mt-2 p-2 bg-green-500 text-white rounded"
-          >
-            Back to Events page
-          </button>
-        </div>
-        <div className="mt-4 p-4">
-          <button
-            onClick={logout}
-            className="mt-2 p-2 bg-green-500 text-white rounded"
-          >
-            Logout
-          </button>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          {/* <div className="w-full border-b-2 border-t-2 mb-2">
+            <div className="w-inherit h-full m-[0.5rem] pt-[3.8rem]"></div>
+          </div> */}
+          <div className="flex flex-col items-center">
+            <div className="border-t-2 border-b-2 p-4">
+              <button
+                onClick={handleBackToEvents}
+                className="p-2 bg-black text-white rounded"
+              >
+                Back to Events page
+              </button>
+            </div>
+            <div className="mt-6 mb-2 border-t-2 border-b-2 p-[0.8rem]">
+              <button
+                onClick={gotoResults}
+                className="p-2 bg-black text-white rounded"
+              >
+                View Results
+              </button>
+            </div>
+
+            <div className="mt-6 mb-2 border-t-2 border-b-2 p-[0.8rem]">
+              <button
+                onClick={logout}
+                className="p-2 bg-black text-white rounded"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
-export default Results;
+export default SelectTeams;

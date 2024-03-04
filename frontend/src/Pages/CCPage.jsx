@@ -15,16 +15,17 @@ const CriteriaForm = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      let response;
       try {
-        const response = await axios.get(
-          "http://localhost:17392/getCurrentUser"
-        );
+        response = await axios.get("http://localhost:17392/getCurrentUser");
+        console.log("Response", response.data);
         if (response.data && response.data.user && response.data.user._id) {
           setEventId(response.data.user._id);
         }
       } catch (error) {
         console.error("Error fetching event ID:", error);
       } finally {
+        console.log("Response", response.data);
         setLoading(false);
       }
     };
@@ -44,13 +45,14 @@ const CriteriaForm = () => {
 
   const handleAddJudge = async (e) => {
     e.preventDefault();
+    let response;
     try {
-      const response = await axios.post("http://localhost:17392/judge/add", {
-        judgeName,
-        email,
-        password,
+      response = await axios.post("http://localhost:17392/judge/add", {
+        Name: judgeName,
+        Email: email,
+        Password: password,
       });
-      console.log("Criteria added successfully:", response.data);
+      console.log("Judge added successfully:", response.data);
     } catch (error) {
       console.error("Error adding criteria:", error);
       console.log(response.data);
@@ -59,14 +61,13 @@ const CriteriaForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:17392/addCriteria", {
-        eventId,
-        criteriaId,
-        criteria: criteriaName,
-        description: "",
-        minScore,
-        maxScore,
-        roundNumber,
+      const response = await axios.post("http://localhost:17392/criteria/add", {
+        eventId: eventId,
+        criteria: criteriaId,
+        description: criteriaName,
+        minScore: minScore,
+        maxScore: maxScore,
+        roundNumber: roundNumber,
       });
       console.log("Criteria added successfully:", response.data);
     } catch (error) {

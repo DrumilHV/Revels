@@ -19,6 +19,7 @@ import JudgeScore from "./Pages/JudgeScore";
 import JudgeLogin from "./Pages/JudgeLogin";
 import JudgeEvent from "./Pages/JudgeEvent";
 import JudgeSelectTeam from "./Pages/JudgeSelectTeam";
+import JudgeResult from "./Pages/JudgeResult";
 
 const App = () => {
   const judgeId = localStorage.getItem("judge_id");
@@ -119,9 +120,9 @@ const App = () => {
         <Route
           path="/cc/addContent"
           element={
-            <CCProtect>
-              <CCPage />
-            </CCProtect>
+            // <CCProtect>
+            <CCPage />
+            // </CCProtect>
           }
         />
         <Route
@@ -140,6 +141,7 @@ const App = () => {
             <Route path="/judge/score" element={<JudgeScore />} />
             <Route path="/judge/event" element={<JudgeEvent />} />
             <Route path="/judge/event/:id" element={<JudgeSelectTeam />} />
+            <Route path="/judge/result/:id" element={<JudgeResult />} />
           </>
         ) : (
           <Route path="*" element={<Navigate to="/judge/login" />} />
