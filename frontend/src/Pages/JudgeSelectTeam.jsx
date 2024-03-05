@@ -3,29 +3,6 @@ import { useAppContext } from "../context/appContext";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-const data = [
-  {
-    _id: "65ddec8b34dd3cd520f62c0d",
-    user_type: "MAHE",
-    team_type: 1,
-    team_leader: "ABHIMANYU VASUDEV",
-    team_id: "100325",
-    delegate_id: "102492",
-    mobile: "9620784541",
-    event_name: "THEME VOGUE BLITZ",
-  },
-  {
-    _id: "7a92e61b9a1d2bf39c764f5e",
-    user_type: "Non-MAHE",
-    team_type: 2,
-    team_leader: "Arnav",
-    team_id: "100326",
-    delegate_id: "102493",
-    mobile: "9876543210",
-    event_name: "Some Other Event",
-  },
-];
-
 function SelectTeams() {
   // Initialize dispatch
   const { setTeamID, setEventID } = useAppContext(); // Import setTeamNumber and setEventID from context
@@ -39,23 +16,23 @@ function SelectTeams() {
   const [tableData, setTableData] = useState([]);
 
   useEffect(() => {
-    const fetchEvents = async () => {
+    const fetchTeams = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:17392/event/getTeams",
+          "http://localhost:17392/event/getEventTeams",
           {
             params: {
               eventId: eventID,
             },
           }
         );
-        setTableData(data);
-        console.log("Table Data:", response.data.teams);
+        setTableData(response.data);
+        console.log("Table Data:", response.data);
       } catch (error) {
         console.error("Error fetching events:", error);
       }
     };
-    fetchEvents();
+    fetchTeams();
   }, []);
 
   function handleCellClick(teamID) {
@@ -84,7 +61,7 @@ function SelectTeams() {
 
   return (
     <>
-      <div className="w-screen h-screen lg:p-8 md:p-4 sm:p-2 rounded shadow-md">
+      <div className="w-screen h-screen lg:p-8 md:p-4 sm:p-2 rounded">
         <div className="w-full min-h-full flex flex-col items-center justify-center border-2 rounded-md">
           <h1 className="lg:text-3xl sm:text-xl mb-8 font-bold text-white border-b-2 p-4">
             Event ID: {eventID}
@@ -99,12 +76,12 @@ function SelectTeams() {
                 </th>
               </tr>
             </thead>
-            <tbody className="flex gap-x-10 justify-center items-center m-[30px]">
+            <tbody className="flex gap-x-10 justify-center items-center m-[30px] flex-wrap">
               {tableData.map((team, index) => (
                 <tr key={index}>
                   <td>
                     <div
-                      className="p-6 border-r-2 border-l-2 hover:opacity-80 hover:underline transition-opacity ease-in text-white text-2xl cursor-pointer"
+                      className="p-6 border-r-2 border-l-2 hover:opacity-80 hover:underline transition-opacity ease-in text-white text-2xl cursor-pointer mt-2"
                       onClick={handleCellClick.bind(this, team.team_id)}
                     >
                       {team.team_id}

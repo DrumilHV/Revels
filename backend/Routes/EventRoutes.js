@@ -10,6 +10,7 @@ import {
   getAllEvents,
   getEventDelegateIds,
   getCriteriaByEventId,
+  getEventTeams,
 } from "../controllers/eventController.js";
 import { eventsDropDown, getEvents } from "../controllers/eventsController.js";
 
@@ -23,6 +24,8 @@ router.get("/getAllEvents", getAllEvents);
 
 router.get("/delegateids", getEventDelegateIds);
 router.get("/criteria", getCriteriaByEventId);
+
+router.get("/getEventTeams", getEventTeams);
 
 router.route("/dropdown").get(eventsDropDown);
 router.route("/details").get(getEvents);

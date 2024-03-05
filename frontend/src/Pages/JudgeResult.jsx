@@ -12,7 +12,7 @@ function Results() {
     const fetchTeamsAndScores = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:17392/event/getTeams",
+          "http://localhost:17392/event/getEventTeams",
           {
             params: {
               eventId: eventID,
@@ -20,16 +20,16 @@ function Results() {
           }
         );
         console.log("After getting teams");
-        console.log("Response:", response.data.teams);
-        const teams = response.data.teams;
+        console.log("Response:", response.data);
+        const teams = response.data;
         const updatedTeams = await Promise.all(
           teams.map(async (team) => {
-            console.log("Delegate ID:", team.delegateId);
+            console.log("Delegate ID:", team.team_id);
             try {
               const scoreResponse = await axios.post(
                 "http://localhost:17392/scores/final_score",
                 {
-                  delegateId: team.delegateId,
+                  delegateId: team._id,
                 }
               );
               console.log("Score Response:", scoreResponse.data);
@@ -83,9 +83,9 @@ function Results() {
           </thead>
           <tbody>
             {tableData.map((team) => (
-              <tr key={team.delegate_id}>
+              <tr key={team.team_id}>
                 <td className="text-white text-center border cursor-pointer p-4">
-                  {team.delegateId}
+                  {team.team_id}
                 </td>
 
                 <td className="text-white text-center border p-4">

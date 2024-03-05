@@ -22,6 +22,7 @@ const Leaderboard = ({ data }) => {
   const [datas, setDatas] = useState([]);
   const [categoryType, setCategoryType] = useState("");
   const [categoryName, setCategoryName] = useState("");
+  const [filterData, setFilterData] = useState([]);
 
   useEffect(function () {
     async function fetchEventsData() {
@@ -38,12 +39,51 @@ const Leaderboard = ({ data }) => {
     fetchEventsData();
   }, []);
 
+  const onSubmit = async (formData) => {
+    try {
+      const response = await fetch(
+        "http://localhost:17392/leaderboard/fetchleaderboard",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (response.ok) {
+        const leaderboardData = await response.json();
+        console.log(
+          "Fetched data from leaderboard successfully:",
+          leaderboardData
+        );
+
+        // Filter the leaderboard data based on the form data
+        const filteredData = leaderboardData.filter(
+          (event) => event.eventname === "New Event"
+        );
+
+        console.log("Filtered Data:", filteredData);
+
+        // Update the state with the filtered data
+        setFilterData(filteredData);
+      } else {
+        console.error("Failed to fetch data from leaderboard");
+      }
+    } catch (error) {
+      console.error("Error fetching data from leaderboard:", error);
+    }
+  };
+  // useEffect(() => {
+  //   console.log("Filter Data:", filterData);
+  // }, [filterData]); // This effect will run whenever filterData changes
+
   const handleCategoryTypeChange = (e) => {
     setCategoryType(e.target.value);
   };
 
   const handleCategoryNameChange = (e) => {
     setCategoryName(e.target.value);
+    onSubmit(e.target.value);
   };
 
   const filteredData = useMemo(() => {
@@ -101,44 +141,47 @@ const Leaderboard = ({ data }) => {
         </div>
 
         <div className="justify-center grid md:grid-cols-1 lg:grid-cols-1 gap-x-4 gap-y-8 md:w-4/5 items-start md:h-[500px] overflow-y-auto px-6 rounded-lg py-8 mb-[20px] no-scrollbar overflow-x-hidden">
-          {filteredData.map((event, index) => (
-            <div
-              key={index}
-              className="md:ml-[5%] md:mr-[5%] rounded bg-[#EACCAF] px-[10px] py-[10px] bg-opacity-[0.4] no-scrollbar overscroll-y-auto min-w-full mt-0"
-            >
-              <div className="">
-                <div className="mb-8">
-                  <h3 className="pb-2 font-bold xl:text-3xl md:text-xl text-[#2C2F42] text-center mt-[1%]">
-                    {event.eventname}
-                  </h3>
-                  <table className="table-auto w-full text-[#FFF]">
-                    <thead>
-                      <tr>
-                        <th className="px-4 py-2 text-left xl:text-[27px] md:text-[26px] border-b border-[#2C2F42]">
-                          Position
-                        </th>
-                        <th className="px-4 py-2 text-right xl:text-[27px] md:text-[26px] border-b border-[#2C2F42]">
-                          Delegate ID
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {event.eventRanking.map((row, rowIndex) => (
-                        <tr key={rowIndex} className="border-b">
-                          <td className="px-4 py-2 text-left xl:text-[21px] md:text-[16px] border-b border-[#2C2F42]">
-                            {row.position || rowIndex + 1}
-                          </td>
-                          <td className="px-4 py-2 text-right xl:text-[21px] md:text-[16px] border-b border-[#2C2F42]">
-                            {row.delegateId}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+          {filterData &&
+            filterData.map((event, index) => {
+              return (
+                <div
+                  key={index}
+                  className="md:ml-[5%] md:mr-[5%] rounded bg-[#EACCAF] px-[10px] py-[10px] bg-opacity-[0.4] no-scrollbar overscroll-y-auto min-w-full mt-0"
+                >
+                  <div className="">
+                    <div className="mb-8">
+                      <h3 className="pb-2 font-bold xl:text-3xl md:text-xl text-[#2C2F42] text-center mt-[1%]">
+                        {event.eventname}
+                      </h3>
+                      <table className="table-auto w-full text-[#FFF]">
+                        <thead>
+                          <tr>
+                            <th className="px-4 py-2 text-left xl:text-[27px] md:text-[26px] border-b border-[#2C2F42]">
+                              Position
+                            </th>
+                            <th className="px-4 py-2 text-right xl:text-[27px] md:text-[26px] border-b border-[#2C2F42]">
+                              Delegate ID
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {event.eventRanking.map((row, rowIndex) => (
+                            <tr key={rowIndex} className="border-b">
+                              <td className="px-4 py-2 text-left xl:text-[21px] md:text-[16px] border-b border-[#2C2F42]">
+                                {row.position || rowIndex + 1}
+                              </td>
+                              <td className="px-4 py-2 text-right xl:text-[21px] md:text-[16px] border-b border-[#2C2F42]">
+                                {row.delegateId}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          ))}
+              );
+            })}
         </div>
       </div>
     </>

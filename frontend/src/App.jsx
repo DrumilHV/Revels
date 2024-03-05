@@ -120,9 +120,9 @@ const App = () => {
         <Route
           path="/cc/addContent"
           element={
-            // <CCProtect>
-            <CCPage />
-            // </CCProtect>
+            <CCProtect>
+              <CCPage />
+            </CCProtect>
           }
         />
         <Route

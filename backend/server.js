@@ -22,6 +22,7 @@ import eventRouter from "./Routes/EventRoutes.js";
 import categoryRoutes from "./Routes/categoryRoutes.js";
 import EventRoutes from "./Routes/EventRoutes.js";
 import criteriaRoutes from "./Routes/criteriaRoutes.js";
+import leaderboardRoutes from "./Routes/leaderboardRoutes.js";
 import judgeRoutes from "./Routes/judgeRoutes.js";
 import scoreRoutes from "./Routes/scoreRoutes.js";
 import authRoutes from "./Routes/authRoutes.js";
@@ -36,6 +37,7 @@ import xss from "xss-clean";
 import mongoSanitize from "express-mongo-sanitize";
 import cookieParser from "cookie-parser";
 import cors from "cors";
+// import Leaderboard from "./models/Leaderboard.js";
 
 const port = process.env.PORT || 17392;
 
@@ -94,6 +96,7 @@ app.use("/api/events", eventRouter);
 app.use("/category", categoryRoutes);
 app.use("/event", EventRoutes);
 app.use("/criteria", criteriaRoutes);
+app.use("/leaderboard", leaderboardRoutes);
 app.use("/judge", judgeRoutes);
 app.use("/scores", scoreRoutes);
 app.use("/auth", authRoutes);

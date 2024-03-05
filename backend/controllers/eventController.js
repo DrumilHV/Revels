@@ -156,3 +156,37 @@ export const getEventDelegateIds = async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 };
+
+// Get event teams
+import fetchData from "../utils/fetchData.js";
+const teamUrl = "https://api.revelsmit.in/api/v1/admin/event/team-details/";
+
+const findTeam = async (eventId) => {
+  let page = 1;
+  let team = [];
+  do {
+    const { data } = await fetchData(
+      teamUrl + eventId.toString() + `?page=${page}`
+    );
+    team = team.concat(data.docs);
+    if (!data.hasNextPage) break;
+    else page++;
+  } while (true);
+  if (team.length > 0) return team;
+  return null;
+};
+
+export const getEventTeams = async (req, res) => {
+  try {
+    const { eventId } = req.query;
+    const team = await findTeam(eventId);
+    if (team) {
+      res.json(team);
+    } else {
+      res.status(404).json({ message: "Team not found" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+};
